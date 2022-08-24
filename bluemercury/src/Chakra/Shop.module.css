@@ -1,0 +1,32 @@
+.BrandMainBox{
+    width: 99.7vw;
+    /* border: 1px solid red; */
+    z-index: 99;
+}
+
+.BrandBox{
+    width: 65%;
+    margin: auto;
+    /* height: 600px; */
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between ;
+}
+
+.BrandFirstBox{
+    text-align: left; 
+    margin-top: 20px;
+    border-right: 1px solid gray;
+    padding-right: 40px;
+}
+
+.BrandSecBox{
+    text-align: left;
+    margin-top: 20px;
+}
+
+.BrandSecPara{
+    font-size: 15px;
+    color: gray;
+    margin-top: 5px;
+}
