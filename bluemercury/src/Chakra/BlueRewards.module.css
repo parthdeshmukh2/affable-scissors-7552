@@ -1,0 +1,29 @@
+.RewardsMainBox{
+    width: 99.7vw;
+    /* border: 1px solid red; */
+    z-index: 99;
+}
+
+.RewardBox{
+    width: 35%;
+    margin: auto;
+    /* height: 400px; */
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.RewardFirBox{
+    text-align: left;
+    margin-top: 20px;
+}
+
+.RewardSecBox{
+    text-align: left;
+}
+
+.RewardPara{
+    color: gray;
+    margin-top: 5px;
+    font-size: 15px;
+}
