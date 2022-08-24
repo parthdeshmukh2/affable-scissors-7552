@@ -1,0 +1,166 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  .smallimg {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    border: 1px solid black;
+  }
+  
+  .category {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    border: 1px solid black;
+    width: 550px;
+    padding: 5px;
+  }
+  .catchild {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    border: 1px solid blue;
+  }
+  .img {
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+    border-top: 1px solid black;
+  }
+  
+  .parent {
+    border: 1px solid blue;
+    display: flex;
+    padding-left: 50px;
+  }
+  .child1 {
+    border: 1px solid red;
+    margin-right: 10px;
+    width: 40%;
+    display: flex;
+  }
+  .bigchild {
+      border: 1px solid black;
+      width: 80%;
+      margin-left: 10px;
+      
+  }
+  .bigchild img{
+      width: 100%;
+      border: 1px solid red;
+      display: flex;
+      margin-top:50px;
+  }
+  .child2 {
+    border: 1px solid rebeccapurple;
+    padding-left: 30px;
+  }
+  .hum{
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid maroon;
+      margin-bottom: 8px;
+  }
+  
+  .star{
+      display: flex;
+      border: 1px solid bisque;
+      margin-bottom: 8px;
+  
+  }
+  
+  .new{
+      display: flex;
+      border: 1px solid bisque;
+      margin-bottom: 8px;
+  }
+  .interest{
+      display: flex;
+      margin-bottom: 8px;
+      border: 1px solid bisque;
+  }
+  .vegan{
+      border: 1px solid royalblue;
+      margin-top: 30px;
+      width: 75%;
+  }
+  
+  .free{
+      display: flex;
+      margin-top: 30px;
+  }
+  
+  .count{
+      margin-top: 30px;
+  }
+  
+  .cart{
+      margin-top: 30px;
+      display: flex;
+      background-color: blue;
+      justify-content: space-between;
+      width: 50%;
+      height: 40px;
+  }
+  .cart1{
+      display: flex;
+  }
+  
+  .cart2{
+      background-color: blue;
+  }
+  
+  .counter{
+      display: flex;
+      border: 1px solid black;
+      height: 40px;
+      margin-top: 30px;
+      width: 100px;
+      margin-left: 10px;
+  }
+  .counter button{
+  width: 30px;
+  background-color: antiquewhite;
+  }
+  
+  .ship{
+      display: flex;
+      border: 1px solid black;
+      width: 70%;
+      margin-top: 10px;
+      height: 30px;
+  justify-content: space-between;
+  }
+  
+  .ship2{
+      border: 1px solid black;
+      border-radius: 50%;
+      color: red;
+      width: 30px;
+      padding: auto;
+  }
+  
+  .counter div{
+      margin-left: 5px;
+      margin-right: 5px;
+      margin-top: 10px;
+  }
+  
+  .parentcart{
+      display: flex;
+      border: 1px solid red;
+      width: 70%;
+  }
+  
+  .clean{
+      border: 1px solid red;
+   margin-bottom: 8px;   
+  }
+  
+  .interest p{
+      margin-left: 5px;
+  }

@@ -1,0 +1,76 @@
+.NavbarBox{
+    /* border: 1px solid black; */
+    margin: auto;
+    /* height: 150px; */
+    background-color: white;
+}
+
+.NavUpperBox{
+    /* border: 1px solid red; */
+    width: 90%;
+    margin: auto;
+    /* height: 40px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.NavUpprLeftBox{
+    /* border: 1px solid red; */
+    width: 15%;
+    /* height: 100%; */
+    text-align: left;
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.SpaChn{
+    font-size: 12px;
+    color: rgb(33, 31, 31);
+}
+
+
+.NavUpprRigtBox{
+    /* border: 1px solid red; */
+    width: 35%;
+    /* height: 100%; */
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+
+.NavUpRigFirst{
+    /* border: 1px solid black; */
+    width: 23%;
+    /* height: 100%; */
+    /* text-align: left; */
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+.WishStyle{
+    font-size: 12px;
+}
+
+
+.blueLogoImg{
+    width: 15%;
+    /* height: 40px; */
+    /* border: 1px solid black; */
+    margin: auto;
+}
+
+
+.NavbarHoverBox{
+    width: 60%;
+    /* height: 60px; */
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-around;
+}
