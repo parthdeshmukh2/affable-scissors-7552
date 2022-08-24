@@ -1,12 +1,11 @@
 import React from 'react'
 
-const HomePage = () => {
+const Dumy = () => {
   return (
     <div>
-     
-     
+      
     </div>
   )
 }
 
-export default HomePage
+export default Dumy

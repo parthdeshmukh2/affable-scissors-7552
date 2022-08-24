@@ -1,12 +1,13 @@
-import "./App.css";
-import SingleProduct from "./Pages/SingleProduct";
+import logo from './logo.svg';
+import './App.css';
+import MainRoutes from './Pages/MainRoutes';
 
 function App() {
   return (
-    <div >
-      <SingleProduct />
-    </div>
-  );
+    <div className="App">
+     <MainRoutes/>
+     </div>
+
 }
 
 export default App;
