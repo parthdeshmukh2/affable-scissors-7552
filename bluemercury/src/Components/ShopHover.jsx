@@ -6,7 +6,7 @@ import {
     MenuList,
 } from "@chakra-ui/react"
 
-import styles from "../Chakra/Shop.module.css"
+import styles from "../Styles/Shop.module.css"
 
 
 export default function ShopHover() {

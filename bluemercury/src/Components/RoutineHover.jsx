@@ -6,7 +6,7 @@ import {
     MenuList,
 } from "@chakra-ui/react"
 
-import styles from "../Chakra/RoutineHover.module.css"
+import styles from "../Styles/RoutineHover.module.css"
 
 
 export default function RoutineHover() {
