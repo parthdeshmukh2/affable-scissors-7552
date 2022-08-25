@@ -4,7 +4,7 @@ import { Text,Flex,Button ,Box,Stack,Image} from '@chakra-ui/react'
 
 const My_Wishlist = () => {
   return (
-    <Flex direction={"column"} textAlign="left"  w="70%" gap="20px">
+    <Flex direction={"column"} textAlign="left"  w="70%" gap="20px" mt={["25px", "25px" ,"0px" ]} >
     <Text fontSize='md' >My Account > My Wishlist</Text>
     <Text fontSize='3xl' mt="-20px">MY WISHLIST</Text>
     

@@ -48,7 +48,7 @@ export default function Footer() {
         <SimpleGrid
           templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 1fr 1fr' }}
           spacing={8}>
-          <Stack spacing={1}display={"flex"} flexDirection="column" pl="25px" alignItems={"flex-start"} height="150px" >
+          <Stack spacing={1}display={["none","none","flex"]} flexDirection="column" pl="25px" alignItems={"flex-start"} height="150px" >
             <Text fontSize={'md'}> Get Expert Beauty Insight & Offers</Text>
             <Flex alignItems={"center"}>
             <input type="text" className='inputt' placeholder='EMAIL ADDRESS'/>

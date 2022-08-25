@@ -26,7 +26,7 @@ const My_Purchases = () => {
   }
 
   return (
-    <Flex direction={"column"} textAlign="left"  w="70%" gap="20px">
+    <Flex direction={"column"} textAlign="left"  w="70%" gap="20px" mt={["25px", "25px" ,"0px" ]} >
     <Text fontSize='md' >My Account > My Purchases</Text>
     <Text fontSize='3xl' mt="-20px">MY PURCHASES</Text>
      <div className="skills-section">
@@ -52,8 +52,9 @@ const My_Purchases = () => {
             
             <div className="text">
                 <div>
-            <Input w="600px" variant='outline' color={"black"} placeholder='Filled' placeholder="Search All Orders"/>
+            <Input w="[450px,500px,600px]" variant='outline' color={"black"} placeholder='Filled' placeholder="Search All Orders"/>
 <SearchIcon ml="-30px" /></div>
+<Box display={["none","none","flex"]}>
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{"background":"white","width":"130px","color":"black","textAlign":"left","marginLeft":"20px", "color":"rgb(139,150,167)"}}  >
   Most recent
@@ -66,6 +67,7 @@ const My_Purchases = () => {
     <li><a class="dropdown-item" href="#">Lowest Total</a></li>
   </ul>
 </div>
+</Box>
             </div>
          <Text  color="rgb(139,150,167)">   No relevant orders found. </Text>
           </div>

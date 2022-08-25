@@ -15,7 +15,7 @@ const [category,setCategory]= useState("Account")
   return (
     <div>Wishlist
   <Text fontSize='4xl' fontWeight={100} textAlign={"left"} pb="20px" w="94%" m="30px auto" borderBottom={"1px solid black"}>MY ACCOUNT</Text>
-  <Flex direction={"row"} w="94%" m="auto" justifyContent={"space-between"} >
+  <Flex direction={["column", "column", "row"]} w="94%" m="auto" justifyContent={"space-between"} >
     <Flex direction={"column"} gap="10px" textAlign={"left"} w="350px">
    <Text color=" rgb(139,150,167)"  className='texts'
     border={"1px solid rgb(139,150,167)"} 

@@ -4,7 +4,7 @@ import { Text,Flex,Button ,Box,Stack} from '@chakra-ui/react'
 
 const My_blueRewards = () => {
   return (
-    <Flex direction={"column"} textAlign="left"  w="70%" gap="20px">
+    <Flex direction={"column"} textAlign="left"  w="70%" gap="20px" mt={["25px", "25px" ,"0px" ]} >
 <Text fontSize='md' >My Account > My BlueRewards</Text>
 <Text fontSize='3xl' mt="-20px">MY BLUEREWARDS</Text>
 

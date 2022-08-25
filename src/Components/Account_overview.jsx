@@ -6,7 +6,7 @@ import { EditIcon} from '@chakra-ui/icons'
 
 const Account_overview = () => {
   return (
-<Flex direction={"column"} textAlign="left"  w="70%" gap="20px" >
+<Flex direction={"column"} textAlign="left"  w="70%" gap="20px" mt={["25px", "25px" ,"0px" ]} >
 <Text fontSize='md' >My Account > Account Overview</Text>
 <Text fontSize='3xl' mt="-20px">ACCOUNT OVERVIEW</Text>
 <Flex textAlign={"center"}>
