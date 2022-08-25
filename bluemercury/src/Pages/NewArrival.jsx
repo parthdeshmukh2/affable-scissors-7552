@@ -17,6 +17,7 @@ const NewArrival = () => {
     console.log(product)
   return (
     <div>
+
       {product.length>0  && 
       product.map((elem)=> {
           return <Link to={`/product/${elem._id}`}><h1 key={elem.id}>{elem.Title}</h1></Link>

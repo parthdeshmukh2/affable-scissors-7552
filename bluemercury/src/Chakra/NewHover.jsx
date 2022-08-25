@@ -5,6 +5,7 @@ import {
     MenuButton,
     MenuList,
 } from "@chakra-ui/react"
+import { Link } from "react-router-dom"
 
 import styles from "../Chakra/NewHover.module.css"
 
@@ -13,7 +14,7 @@ export default function NewHover() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
         <Menu isOpen={isOpen}>
-            <MenuButton
+           <Link to="/newarrival"> <MenuButton
                 fontSize="15"
                 variant="ghost"
                 color="grey"
@@ -26,8 +27,8 @@ export default function NewHover() {
                 onMouseEnter={onOpen}
                 onMouseLeave={onClose}
             >
-                NEW!
-            </MenuButton>
+                NEW! 
+            </MenuButton></Link>
             <MenuList onMouseEnter={onOpen} onMouseLeave={onClose}>
                 <div className={styles.NewMainBox}>
             <div className={styles.NewBox}>
