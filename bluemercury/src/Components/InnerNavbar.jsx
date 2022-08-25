@@ -2,7 +2,7 @@ import { Box, IconButton } from '@chakra-ui/react'
 import React from 'react'
 import { BsHandbag, BsSearch, BsSuitHeart } from 'react-icons/bs'
 import { CgProfile } from 'react-icons/cg'
-import styles from "../Navbar/InnerNavbar.module.css"
+import styles from "../Styles/InnerNavbar.module.css"
 import {
     Menu,
     MenuButton,

@@ -1,15 +1,15 @@
 import React from 'react'
-import styles from "../Navbar/Navbar.module.css"
+import styles from "../Styles/Navbar.module.css"
 import { GoLocation } from "react-icons/go";
 import { BsHandbag, BsSearch, BsSuitHeart } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
-import NewHover from '../Chakra/NewHover';
-import EventHover from '../Chakra/EventsHover';
-import BrandsHover from '../Chakra/BrandsHover';
-import BlueRewards from '../Chakra/BlueRewards';
-import ExploreHover from '../Chakra/ExploreHover';
-import RoutineHover from '../Chakra/RoutineHover';
-import ShopHover from '../Chakra/ShopHover';
+import NewHover from '../Components/NewHover';
+import EventHover from '../Components/EventsHover';
+import BrandsHover from '../Components/BrandsHover';
+import BlueRewards from '../Components/BlueRewards';
+import ExploreHover from '../Components/ExploreHover';
+import RoutineHover from '../Components/RoutineHover';
+import ShopHover from '../Components/ShopHover';
 
 const Navbar = () => {
   return (

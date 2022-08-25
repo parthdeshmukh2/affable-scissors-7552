@@ -6,7 +6,7 @@ import {
     MenuButton,
     MenuList,
 } from "@chakra-ui/react"
-import styles from "../Chakra/BlueRewards.module.css"
+import styles from "../Styles/BlueRewards.module.css"
 
 
 export default function BlueRewards() {

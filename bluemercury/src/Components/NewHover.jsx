@@ -7,7 +7,7 @@ import {
 } from "@chakra-ui/react"
 import { Link } from "react-router-dom"
 
-import styles from "../Chakra/NewHover.module.css"
+import styles from "../Styles/NewHover.module.css"
 
 
 export default function NewHover() {
