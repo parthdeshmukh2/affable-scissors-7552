@@ -11,7 +11,6 @@ const MainRoutes = () => {
         <Route path='/'  element={<HomePage/>}  />
         <Route path='/newarrival'  element={<NewArrival/>}  />
         <Route path='/Dumy'  element={<Dumy/>}  />
-      
     </Routes>
   )
 }
