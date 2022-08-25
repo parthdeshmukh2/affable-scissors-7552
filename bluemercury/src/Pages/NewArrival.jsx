@@ -6,6 +6,7 @@ import { getData } from "../Redux/AppReducer/action";
 import Sortbar from "../Components/Sortbar";
 import Category from "../Components/Category";
 import Filtering from "../Components/Filtering";
+import { Flex } from "@chakra-ui/react";
 
 const NewArrival = () => {
   const dispatch = useDispatch();
@@ -20,7 +21,8 @@ const NewArrival = () => {
   return (
     <div>
       <Sortbar />
-      <Category />
+      {/* <Category /> */}
+      <Flex>
       <Filtering />
       <div className="productsDiv">
       {product.map((elem) => (
@@ -32,7 +34,7 @@ const NewArrival = () => {
           </div>
       ))}
       </div>
-        
+      </Flex>
     </div>
   );
 };
