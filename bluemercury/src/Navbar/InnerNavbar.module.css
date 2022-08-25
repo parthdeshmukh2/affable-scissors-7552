@@ -1,0 +1,40 @@
+.InnerNavAkay{
+    /* border: 1px solid black; */
+    width: 95%;
+    margin: auto;
+    display: flex;
+    /* height: 100px; */
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+
+.InnerNavFirstBox{
+    /* border: 1px solid red; */
+    width: 10%;
+    /* height: 100%; */
+}
+
+.InnerNavSecBox{
+    /* border: 1px solid red; */
+    width: 15%;
+    /* height: 100%; */
+}
+
+
+.InnerNavThirBox{
+    /* border: 1px solid red; */
+    width: 20%;
+    /* height: 100%; */
+    display: flex;
+    gap: 30px;
+}
+
+
+.ThirIconBox{
+    width: 25%;
+    /* height: 100%; */
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+}
