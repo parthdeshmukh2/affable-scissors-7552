@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "SPRAY",
+      "about": "Use to kill",
+      "image": "https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-087327005291-1_240x240.jpg?v=1659760709",
+      "price": "100",
+      "qty": 1
+    },
+    {
+      "id": 2,
+      "title": "Mobile",
+      "about": "Use for many purpose",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.EN6R9tEWgyjOqXOSTKR5igHaO0&pid=Api&P=0",
+      "price": "50",
+      "qty": 1
+    },
+    {
+      "id": 3,
+      "title": "Laptop",
+      "about": "Use to many purpose",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.lYVzyTHvj2cME5ekzl8bYAHaFj&pid=Api&P=0",
+      "price": "30",
+      "qty": 4
+    },
+    {
+      "id": 4,
+      "title": "I Phone 12",
+      "about": "Use to many purpose",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.PCNPj_Vv2qE3vNZpo9IbcgHaHa&pid=Api&P=0",
+      "price": "20",
+      "qty": 3
+    }
+  ]
+}
