@@ -1,0 +1,21 @@
+.EmptyBagBoxakay{
+    width: 75%;
+    margin: auto;
+    /* border: 1px solid red; */
+    /* height: 500px; */
+    margin-top: 200px;
+}
+
+
+.EmptyCart{
+    color: #20385e;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+
+.EmptyBtn{
+    font-weight: 500; 
+    margin-top: 20px;
+}

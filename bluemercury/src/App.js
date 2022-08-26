@@ -1,5 +1,5 @@
 import "./App.css";
-import Dumy from "./Pages/Dumy";
+
 import MainRoutes from "./Pages/MainRoutes";
 import NewArrival from "./Pages/NewArrival";
 import SingleProduct from "./Pages/SingleProduct";
@@ -12,6 +12,7 @@ function App() {
       
     
       
+
     </div>
   )
 }

@@ -1,0 +1,197 @@
+.YourBagBoxakay{
+    width: 75%;
+    margin: auto;
+    /* border: 1px solid red; */
+    /* height: 80px; */
+    text-align: left;
+    margin-top: 20px;
+}
+
+
+.YourBagtext{
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+
+.BaglengthBoxakay{
+    width: 75%;
+    margin: auto;
+    /* border: 1px solid black; */
+    text-align: left;
+    margin-top: 50px;
+}
+
+
+.CartLengthedit{
+    font-size: 19px;
+    letter-spacing: 1.5px;
+    color: gray;
+}
+
+.ReadyshipBox{
+    width: 75%;
+    margin: auto;
+    border-bottom: 1px solid gray;
+    /* height: 100px; */
+    display: flex;
+    margin-top: 30px;
+}
+
+
+.ReadyShipfirstBox{
+    width: 50%;
+    /* border: 1px solid blue; */
+    /* height: 100%; */
+    text-align: left;
+}
+
+
+.ReadyShipsecBox{
+    width: 50%;
+    /* border: 1px solid green; */
+    /* height: 100%;  */
+    display: flex;
+    justify-content: space-between; 
+}
+
+
+.ReadToShip{
+    font-size: 20px;
+    color: #586781;
+    font-weight: normal;
+}
+
+
+.mapMainBox{
+    width: 75%;
+    margin: auto;
+    border-bottom: 1px solid gray;
+    /* height: 150px; */
+    display: flex;  
+}
+
+
+.MapleftBox{
+    width: 50%;
+    /* border: 1px solid blue; */
+    /* height: 100%; */
+}
+
+.MapRightBox{
+    width: 50%;
+    /* border: 1px solid red; */
+    /* height: 100%; */
+}
+
+
+.MapleftInBox{
+    /* width: 30%; */
+    /* border: 1px solid black; */
+    margin: 20px 0px;
+    /* height: 100%; */
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.mapleftInImgBox{
+    width: 15%;
+    /* border: 1px solid blue; */
+    /* height: 100%; */
+}
+
+
+.mapleftInImgRight{
+    /* border: 1px solid red; */
+    /* height: 100%; */
+    text-align: left;
+}
+
+
+.mapTitleedit{
+    font-weight: 500;
+}
+
+
+.mapTAboutedit{
+    color: gray;
+    font-size: 15px;
+}
+
+
+.MapRightInBox{
+    width: 100%;
+      /* border: 1px solid black; */
+      margin: 30px 0px;
+      /* height: 100%; */
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      display: flex;
+      justify-content: space-between;
+}
+
+
+
+.mapBtnBox{
+    /* border: 1px solid gray; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.incBtnedit{
+    border: 1px solid gray;
+    border-radius: none
+}
+
+.decBtnedit{
+    border: 1px solid gray;
+    border-radius: none
+}
+
+
+.RemoveEdit{
+    text-decoration: underline;
+}
+
+
+
+.RemoveEdit:hover{
+    cursor: pointer;
+}
+
+
+.SubtotalBox{
+    width: 75%;
+    /* border: 1px solid black; */
+    /* height: 100px; */
+    margin: auto;
+    margin-top: 60px;
+    text-align: right;
+}
+
+
+
+.Subtotaledit{
+    font-weight: 500;
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+
+
+.priceEedit{
+    font-size: 20px;
+    color: gray;
+}
+
+
+
+.bagBtnakay{
+    padding: 20px 150px;
+    margin: 20px 0px 40px 0px;
+}
