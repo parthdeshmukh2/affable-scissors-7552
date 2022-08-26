@@ -28,7 +28,7 @@ export default function ShopHover() {
             >
                 SHOP
             </MenuButton>
-            <MenuList onMouseEnter={onOpen} onMouseLeave={onClose}>
+            <MenuList onMouseEnter={onOpen} onMouseLeave={onClose} mt="-5px">
                 <div className={styles.BrandMainBox}>
             <div className={styles.BrandBox}>
                

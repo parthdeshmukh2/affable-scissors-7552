@@ -28,7 +28,7 @@ export default function BlueRewards() {
             >
                 BLUEREWARDS
             </MenuButton>
-            <MenuList onMouseEnter={onOpen} onMouseLeave={onClose} >
+            <MenuList onMouseEnter={onOpen} onMouseLeave={onClose} mt="-5px">
                 <div className={styles.RewardsMainBox}>
            
            <div className={styles.RewardBox}>

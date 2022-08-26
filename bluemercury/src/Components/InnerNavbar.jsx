@@ -18,7 +18,7 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 const InnerNavbar = () => {
   return (
     <Box>
-        <Box h="95%" m="auto" display="flex" justifyContent="space-around"  alignItems="center">
+        <Box w="99%vw" h="95%" m="auto" display="flex" justifyContent="space-around"  alignItems="center">
           
           <Box>
           <Menu>
