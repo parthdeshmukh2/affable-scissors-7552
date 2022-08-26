@@ -26,6 +26,8 @@ const Checkout = () => {
     <Input  w="47%" placeholder='First Name'></Input>
     <Input w="49%" placeholder='Last Name' ></Input>
   </Flex>
+    <Input  w="100%" placeholder='Address'mb="10px"></Input>
+    <Input  w="100%" placeholder='Apartment, suite, etc. (Optional)'mb="10px"></Input>
   <Flex  w="100%" justifyContent={"space-between"}>
     <Input w="33%" m="auto" placeholder='City'mb="10px" ></Input>
     <Input w="33%" m="auto" placeholder='State' mb="10px" ></Input>
