@@ -6,7 +6,7 @@ import {
     MenuList,
 } from "@chakra-ui/react"
 
-import styles from "../Chakra/Explore.module.css"
+import styles from "../Styles/Explore.module.css"
 
 
 export default function ExploreHover() {

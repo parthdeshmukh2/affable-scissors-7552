@@ -6,7 +6,7 @@ import {
     MenuButton,
     MenuList,
 } from "@chakra-ui/react"
-import styles from "../Chakra/EventsHover.module.css"
+import styles from "../Styles/EventsHover.module.css"
 
 
 export default function EventHover() {

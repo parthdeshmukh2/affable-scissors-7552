@@ -5,7 +5,7 @@ import {
     MenuButton,
     MenuList,
 } from "@chakra-ui/react"
-import styles from "../Chakra/BrandsHover.module.css"
+import styles from "../Styles/BrandsHover.module.css"
 
 
 export default function BrandsHover() {
