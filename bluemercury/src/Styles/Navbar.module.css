@@ -1,8 +1,11 @@
 .NavbarBox{
     /* border: 1px solid black; */
     margin: auto;
+    width: 100vw;
     /* height: 150px; */
     background-color: white;
+    position: fixed;
+    z-index: 99;
 }
 
 .NavUpperBox{
