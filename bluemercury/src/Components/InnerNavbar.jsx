@@ -1,8 +1,8 @@
-import { Box, IconButton } from '@chakra-ui/react'
+import { Box, IconButton, Image } from '@chakra-ui/react'
 import React from 'react'
 import { BsHandbag, BsSearch, BsSuitHeart } from 'react-icons/bs'
 import { CgProfile } from 'react-icons/cg'
-import styles from "../Styles/InnerNavbar.module.css"
+// import styles from "../Navbar/InnerNavbar.module.css"
 import {
     Menu,
     MenuButton,
@@ -14,14 +14,13 @@ import {
     MenuDivider,
   } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import { Link } from 'react-router-dom'
 
 const InnerNavbar = () => {
   return (
-    <div>
-        <Box className={styles.InnerNavAkay}>
+    <Box>
+        <Box h="95%" m="auto" display="flex" justifyContent="space-around"  alignItems="center">
           
-          <Box className={styles.InnerNavFirstBox}>
+          <Box>
           <Menu>
   <MenuButton
     as={IconButton}
@@ -33,9 +32,9 @@ const InnerNavbar = () => {
     <MenuItem >
       SHOP
     </MenuItem>
-   <Link to="/newarrival"> <MenuItem>
+    <MenuItem>
       NEW!
-    </MenuItem> </Link>
+    </MenuItem>
     <MenuItem>
       BRANDS
     </MenuItem>
@@ -55,28 +54,28 @@ const InnerNavbar = () => {
 </Menu>
           </Box>
 
-          <Box className={styles.InnerNavSecBox}>
-            <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182" alt=""/>
+          <Box w="50%" h="100%" display="flex" justifyContent="center" >
+            <Image src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182" alt="" w={{base:"80%", md:"60%"}} h={{base:"80%", md:"80%"}}/>
           </Box>
 
-          <Box className={styles.InnerNavThirBox}>
-            <Box className={styles.ThirIconBox}>
-            <BsSuitHeart size={22} color="black"/>
+          <Box display="flex" justifyContent="space-between"  w="30%">
+            <Box>
+            <BsSuitHeart size={20} color="black"/>
             </Box>
-            <Box className={styles.ThirIconBox}>
-            <BsSearch size={22} color="black"/>
+            <Box>
+            <BsSearch size={20} color="black"/>
             </Box>
-            <Box className={styles.ThirIconBox}>
-            <CgProfile size={22} color="black"/>
+            <Box>
+            <CgProfile size={20} color="black"/>
             </Box>
-            <Box className={styles.ThirIconBox}>
-            <BsHandbag size={22} color="black"/>
+            <Box>
+            <BsHandbag size={20} color="black"/>
             </Box>
           </Box>
 
 
         </Box>
-    </div>
+        </Box>
   )
 }
 
