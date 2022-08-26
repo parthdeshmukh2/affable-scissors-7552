@@ -35,12 +35,12 @@
 .parent {
   border: 1px solid blue;
   display: flex;
-  padding-left: 50px;
+   padding-left: 50px; 
 }
 .child1 {
   border: 1px solid red;
   margin-right: 10px;
-  width: 40%;
+  /* width: 40%; */
   display: flex;
 }
 .bigchild {
