@@ -28,7 +28,7 @@ export default function EventHover() {
             >
                 EVENTS
             </MenuButton>
-            <MenuList onMouseEnter={onOpen} onMouseLeave={onClose} >
+            <MenuList onMouseEnter={onOpen} onMouseLeave={onClose} mt="-5px">
                 <div className={styles.EventMainBox}>
             <div className={styles.NewBox}>
                

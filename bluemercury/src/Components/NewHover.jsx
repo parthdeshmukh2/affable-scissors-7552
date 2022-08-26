@@ -29,7 +29,7 @@ export default function NewHover() {
             >
                 NEW! 
             </MenuButton></Link>
-            <MenuList onMouseEnter={onOpen} onMouseLeave={onClose}>
+            <MenuList onMouseEnter={onOpen} onMouseLeave={onClose} mt="-5px">
                 <div className={styles.NewMainBox}>
             <div className={styles.NewBox}>
                
