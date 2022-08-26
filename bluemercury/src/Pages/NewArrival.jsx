@@ -4,8 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { getData } from "../Redux/AppReducer/action";
 import Sortbar from "../Components/Sortbar";
-import Category from "../Components/Category";
-import Filtering from "../Components/Filtering";
+import FilterOptions from "../Components/FilterOptions";
+import Sidebar from "../Components/Sidebar";
 import { Flex } from "@chakra-ui/react";
 
 const NewArrival = () => {
@@ -21,19 +21,20 @@ const NewArrival = () => {
   return (
     <div>
       <Sortbar />
-      {/* <Category /> */}
+     
+
       <Flex>
-      <Filtering />
-      <div className="productsDiv">
-      {product.map((elem) => (
-        <div key={elem.id}>
-          <img src={elem.Image} alt="image"/>
-          <h4>{elem.Brand}</h4>
-          <p>{elem.Title}</p>
-          <p>{"$"+ elem.Price}</p>
-          </div>
-      ))}
-      </div>
+      <Sidebar/>
+        <div className="productsDiv">
+          {product.map((elem) => (
+            <div key={elem.id} className="productCard">
+              <img src={elem.Image} alt="image" />
+             <h4>{elem.Brand}</h4>
+              <p>{elem.Title}</p>
+              <p>{"$ " + elem.Price}</p>
+            </div>
+          ))}
+        </div>
       </Flex>
     </div>
   );
