@@ -11,7 +11,7 @@ const Account_Detail = () => {
     <Text fontSize='md' >My Account > Account Details</Text>
     <Text fontSize='3xl' mt="-20px">ACCOUNT DETAILS</Text>
     
-    <Flex justifyContent={"flex-start"} direction={["column","column","flex"]} m="auto" >
+    <Flex justifyContent={"flex-start"} direction={["column","column","row"]} m="auto" >
 
 <Box w="[70%,70%,40%]" mr="35px" bg="#F8F8F8" h="250px"  border={"1px solid black"} display="flex"
 flexDirection="column" gap="15px" p="10px 25px">
@@ -23,7 +23,7 @@ flexDirection="column" gap="15px" p="10px 25px">
 
 
 </Box>
-<Box w="[70%,70%,40%]" bg="#F8F8F8" h="130px" mr="35px" border={"1px solid black"} display="flex"
+<Box w="[70%,70%,40%]" bg="#F8F8F8" h={["170px","170px","130px"]} mr="35px" border={"1px solid black"} display="flex"
 flexDirection="column" gap="8px" p={["0px 25px","10px 25px","10px 25px"]}>
 
 <Text fontSize='xl' fontWeight={"600"} >ACCOUNT SECURITY</Text>

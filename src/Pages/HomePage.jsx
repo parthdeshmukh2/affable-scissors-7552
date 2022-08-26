@@ -3,7 +3,7 @@ import Footer from '../Components/Footer'
 
 const HomePage = () => {
   return (
-    <div>
+    <div style={{"font-family":" Montserrat Light,sans-serif"}}>
       <h2>Home</h2>
       jbcewejhgbadsvjkln
       <Footer/>
