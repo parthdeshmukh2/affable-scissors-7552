@@ -3,7 +3,7 @@ import { Box, Grid, GridItem, Image, Text } from "@chakra-ui/react";
 
 const NewNest = () => {
   return (
-    <Box w="100%" bg="#dad0dc">
+    <Box w="100%" bg="#dad0dc" mt='12'>
       <Box display="flex" justifyContent="center" p="4">
         <Text
           fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}

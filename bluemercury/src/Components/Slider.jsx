@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import {Text, Image, Spinner} from "@chakra-ui/react"
+import { Link, useNavigate } from "react-router-dom";
 
 // Import Swiper styles
 import "swiper/css";
@@ -14,11 +15,16 @@ import "../Styles/styles.css";
 import { Pagination, Navigation } from "swiper";
 import { Box } from "@chakra-ui/react";
 
+
+
 export const Slider= (dataArr)=>{
   const {data, isLoading} = dataArr;
   console.log(isLoading)
+  const navigate = useNavigate();
   
- 
+ const handleClick = (id)=>{
+navigate(`/product/${id}`)
+ }
   return (
     <Box m='auto' mt='8'  w='80%' >
      
@@ -57,8 +63,8 @@ export const Slider= (dataArr)=>{
 
     {data.map((elem)=> {
       return (
-
-        <SwiperSlide key={elem._id}>
+        
+        <SwiperSlide key={elem._id} onClick={(id)=>handleClick(id)}>
           <Box display='flex' flexDirection='column' boxShadow='2xl' p='4' h='350px' mb='8' borderRadius='xl' cursor='pointer'>
             <Box h='70%'>
             <Image  src={elem.Image} />
@@ -70,6 +76,7 @@ export const Slider= (dataArr)=>{
           </Box>
          
         </SwiperSlide>
+       
 
       )
     })}

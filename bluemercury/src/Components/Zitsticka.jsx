@@ -3,7 +3,7 @@ import React from 'react'
 
 const Zitsticka = () => {
   return (
-    <Box w='90%' h={{lg:"480px"}} m='auto' mt='8'>
+    <Box w='90%' h={{lg:"480px"}} m='auto' mt='20'>
         <Grid  templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }} w='100%' h='100%' gap='8' >
             <GridItem w='100%' h='100%'>
                 <Image boxSize='480px' w='100%'  objectFit='cover' src='https://cdn.shopify.com/s/files/1/0283/0185/2747/files/zitsticka_coop_x650.jpg?v=1660762100'/>

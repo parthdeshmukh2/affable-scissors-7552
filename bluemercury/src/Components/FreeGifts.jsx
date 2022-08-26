@@ -3,7 +3,7 @@ import React from "react";
 
 const FreeGifts = () => {
   return (
-    <Box w="90%" h={{ lg: "600px" }} m="auto" mt="12">
+    <Box w="90%" h={{ lg: "600px" }} m="auto" mt="20">
       <Grid
         templateColumns={{
           base: "repeat(1, 1fr)",

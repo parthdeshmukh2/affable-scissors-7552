@@ -14,12 +14,26 @@ import HeroBanner3 from "../Assets/HeroBanner3.jpeg";
 
 const Crousel = () => {
   return (
-    <Box >
-        <Box h='35px' bg="rgb(215,235,242)"  display='flex' alignItems='center' justifyContent='center' border='none'>
-            <Text fontFamily='Montserrat Medium,sans-serif' fontSize='10px' color='gray'  fontWeight='500'       letterSpacing= '-10%'>
-FREE SAMPLES WITH ALL ORDERS
-            </Text>
-        </Box>
+    <Box border="1px solid transparent" >
+      <Box
+        h="35px"
+        bg="rgb(215,235,242)"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        border="none"
+        mt={{lg:'32'}}
+      >
+        <Text
+          fontFamily="Montserrat Medium,sans-serif"
+          fontSize="10px"
+          color="gray"
+          fontWeight="500"
+          letterSpacing="-10%"
+        >
+          FREE SAMPLES WITH ALL ORDERS
+        </Text>
+      </Box>
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -31,7 +45,7 @@ FREE SAMPLES WITH ALL ORDERS
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-       <SwiperSlide>
+        <SwiperSlide>
           {/* {" "} */}
           <Image
             boxSize="150px"
@@ -55,7 +69,6 @@ FREE SAMPLES WITH ALL ORDERS
           />
         </SwiperSlide>
 
-       
         <SwiperSlide>
           {/* {" "} */}
           <Image
@@ -67,7 +80,6 @@ FREE SAMPLES WITH ALL ORDERS
             alt="Dan Abramov"
           />
         </SwiperSlide>
-    
       </Swiper>
     </Box>
   );

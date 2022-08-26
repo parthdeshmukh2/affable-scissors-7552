@@ -2,6 +2,7 @@ import { Box, Button, Input, Text } from "@chakra-ui/react";
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import MainNavbar from "../Components/MainNavbar";
 
 
 const SignUp = () => {
@@ -35,10 +36,15 @@ const handleSignUp = async () => {
     }
 }
   return (
+    <Box>
+
+<MainNavbar/>
     <Box
     w={{ base: "90%", sm: "90%", lg: "35%" }}
-    m="auto"
-    mt="16"
+    position='absolute'
+   
+    ml={{base:"5%", sm:"5%", lg:"32.5%"}}
+     mt="44"
     display="flex"
     flexDirection="column"
   >
@@ -143,6 +149,7 @@ const handleSignUp = async () => {
         </Text>
       </Link>
     </Box>
+  </Box>
   </Box>
   )
 }

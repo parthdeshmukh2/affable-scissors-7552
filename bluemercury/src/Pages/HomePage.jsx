@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box} from '@chakra-ui/react';
-import { Slider } from '../Components/Slider';
+import  {Slider}  from '../Components/Slider';
 import Crousel from '../Components/Crousel';
 import NewNest from '../Components/NewNest';
 import TripleThreat from '../Components/TripleThreat';
@@ -19,7 +19,10 @@ const HomePage = () => {
   return (
     <Box>
       <MainNavbar/>
-    <Crousel/>
+      
+      <Crousel/>
+     
+  
     <Box dispaly='flex' flexDirection='column' w='100%'  mt='12'>
       <Text textAlign='center' fontSize='3xl' color='rgb(18,40,76)' fontWeight='400'>NEW ARRIVALS</Text>
     <Slider {...newArrival}/>

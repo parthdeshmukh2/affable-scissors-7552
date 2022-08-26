@@ -1,6 +1,7 @@
 import { Box, Button, Input, Text } from "@chakra-ui/react";
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
+import MainNavbar from "../Components/MainNavbar";
 
 
 const Login = () => {
@@ -33,10 +34,20 @@ const Login = () => {
 
     }
   return (
+    <Box>
+
+<MainNavbar/>
+
+   
     <Box
       w={{ base: "90%", sm: "90%", lg: "35%" }}
-      m="auto"
-      mt="16"
+ 
+      
+position='absolute'
+   
+    ml={{base:"5%", sm:"5%", lg:"32.5%"}}
+     mt="44"
+    
       display="flex"
       flexDirection="column"
     >
@@ -115,6 +126,7 @@ const Login = () => {
           </Text>
         </Link>
       </Box>
+    </Box>
     </Box>
   );
 };
