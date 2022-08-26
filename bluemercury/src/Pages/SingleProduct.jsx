@@ -3,16 +3,20 @@ import styles from "../Styles/SingleProduct.module.css";
 import { Box, Flex, Text, Button } from "@chakra-ui/react";
 
 import { BsCartPlus } from "react-icons/bs";
-import { BsHeart } from "react-icons/bs";
+import { AiFillStar } from "react-icons/ai";
 import { AiOutlineStar } from "react-icons/ai";
 import { RiHeartAddLine } from "react-icons/ri";
 import { RiHeartFill } from "react-icons/ri";
 import { VscAdd } from "react-icons/vsc";
 import { GrSubtract } from "react-icons/gr";
+import { extendTheme } from '@chakra-ui/react';
+
 
 const SingleProduct = () => {
   const [showproduct, setShowproduct] = useState(false);
+  const [showrating, setShowrating] = useState(true);
   //const [disable, setDisable] = useState(false);
+
   const [wish, setWish] = useState(false);
   const style = { width: "50px", height: "30px", marginTop: "13px" };
   const btn = {
@@ -56,8 +60,8 @@ const SingleProduct = () => {
               Daily Cleanse® Clear Skin and Acne Supplement
             </Text>
           </Flex>
-        </Box>
-        <Box backgroundColor="hsl(0,0%,97%)" className={styles.parent}>
+        </Box>  
+        <Box backgroundColor="hsl(0,0%,97%)"  className={styles.parent}>
           <Flex>
             <Box className={styles.smallimg}>
               <img
@@ -85,23 +89,23 @@ const SingleProduct = () => {
                 src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-855514005030-5_75x.jpg?v=1660838906"
                 alt=""
               />
-            </Box >
-            <Box backgroundColor="white" className={styles.bigchild}>
+            </Box>
+            <Box backgroundColor="white" w={[300,400,500]} className={styles.bigchild}>
               <img
                 src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-855514005030-1_825x.jpg?v=1660838903"
                 alt=""
               />
             </Box>
           </Flex>
-          <Box backgroundColor="white" className={styles.child2}>
+          <Box backgroundColor="white" position={{md:"bottom"}} className={styles.child2}>
             <Box className={styles.hum}>
               <Text fontSize={"20px"}>Hum Nutrition</Text>
               <Box marginRight={"90px"} className={styles.star}>
                 <Flex marginTop={"5px"} marginRight={"5px"}>
-                  <AiOutlineStar />
-                  <AiOutlineStar />
-                  <AiOutlineStar />
-                  <AiOutlineStar />
+                <AiFillStar />
+                  <AiFillStar />
+                  <AiFillStar />
+                  <AiFillStar />
                   <AiOutlineStar />
                 </Flex>
                 <Text>46 reviews</Text>
@@ -115,7 +119,7 @@ const SingleProduct = () => {
             <Box>
               <Flex
                 border={"1px solid red"}
-                width={"38%"}
+                width={"48%"}
                 fontWeight={"bold"}
                 marginTop={"6px"}
                 fontSize="15px"
@@ -201,11 +205,9 @@ const SingleProduct = () => {
                       _disabled={true}
                       borderRight={"1px solid gray"}
                     >
-                      <Button disabled={quantity<=1} onClick={decrement}>
-                      {/* <GrSubtract  style={btn} /> */}
-                      -
+                      <Button disabled={quantity <= 1} onClick={decrement}>
+                        {/* <GrSubtract  style={btn} /> */}-
                       </Button>
-                     
                     </Box>
                     <Box
                       margin={["0px", "15px", "0px", "15px"]}
@@ -245,7 +247,8 @@ const SingleProduct = () => {
           </Box>
         </Box>
       </Box>
-      <Box border="1px solid black" margin="auto" width="50%" marginTop="20px">
+
+      <Box border="1px solid black" margin="auto" width="60%" marginTop="20px">
         <Flex justifyContent="space-between" padding="10px">
           <Text fontSize={"25px"} color={"hsl(217,14%,59%)"}>
             Product Information
@@ -265,34 +268,113 @@ const SingleProduct = () => {
         )}
         <Box borderBottom={"1px solid gray"}></Box>
         <Flex justifyContent="space-between" padding="10px">
-          <Text fontSize={"25px"} color={"hsl(217,14%,59%)"}>Ingredients</Text>
+          <Text fontSize={"25px"} color={"hsl(217,14%,59%)"}>
+            Ingredients
+          </Text>
           <Text>+</Text>
         </Flex>
+        <Box borderBottom={"1px solid gray"}></Box>
 
         <Flex justifyContent="space-between" padding="10px">
-          <Text fontSize={"25px"} color={"hsl(217,14%,59%)"}>How to use</Text>
+          <Text fontSize={"25px"} color={"hsl(217,14%,59%)"}>
+            How to use
+          </Text>
           <Text>+</Text>
         </Flex>
+        <Box borderBottom={"1px solid gray"}></Box>
 
         <Flex justifyContent="space-between" padding="10px">
-          <Text fontSize={"25px"} color={"hsl(217,14%,59%)"}>Reviews</Text>
-          <Text>+</Text>
+          <Text fontSize={"25px"} color={"hsl(217,14%,59%)"}>
+            Reviews
+          </Text>
+          <Text cursor={"pointer"} onClick={()=>setShowrating(!showrating)}>{showrating?"-":"+"}</Text>
         </Flex>
+        {showrating && (
+          <Box >
+            <Flex marginLeft={"15px"}><Text fontSize={"25px"} fontWeight="bold">4.7 </Text>
+            <Text marginTop={"15px"}>out of 5 star</Text>
+            </Flex>
+            
+
+            <Flex marginTop={"20px"} border={"1px solid black"}>
+              <Box width={"40%"} marginLeft={"15px"} border={"1px solid red"}>
+                <Flex>crj37.08/22/18</Flex>
+                <Flex>
+                  <AiFillStar />
+                  <AiFillStar />
+                  <AiFillStar />
+                  <AiFillStar />
+                  <AiOutlineStar />
+                </Flex>
+                <Flex>Would you recommend this product?</Flex>
+                <Flex>Was this useful?</Flex>
+                <Flex justifyContent={"space-between"} width={"60%"}> 
+                  <Text>YES</Text>
+                  <Text>NO</Text>
+                  <Text>REPORT</Text>
+                </Flex>
+              </Box>
+              <Box width={"50%"}>
+                <Flex>So far so good- breakout free</Flex>
+                <Flex width={"90%"}>At 48, I'm now dealing with cystic acne (as in 1-2 per week) and was at the end of my rope. I tried products with sulphur, acne dots, etc. I learned about Hum products from..</Flex>
+              </Box>
+            </Flex>
+            <Flex marginTop={"20px"} border={"1px solid black"}>
+              <Box width={"40%"} marginLeft={"15px"} border={"1px solid red"}>
+                <Flex>leahf.08/22/19</Flex>
+                <Flex>
+                  <AiFillStar />
+                  <AiFillStar />
+                  <AiFillStar />
+                  <AiFillStar />
+                  <AiOutlineStar />
+                </Flex>
+                <Flex>Would you recommend this product?</Flex>
+                <Flex>Was this useful?</Flex>
+                <Flex justifyContent={"space-between"} width={"60%"}> 
+                  <Text>YES</Text>
+                  <Text>NO</Text>
+                  <Text>REPORT</Text>
+                </Flex>
+              </Box>
+              <Box width={"50%"}>
+                <Flex>So far so good!</Flex>
+                <Flex>I jumped at the opportunity to try these vitamins complimentary from Hum Nutrition. Love that they are vegan, as many formulated for skin and “clean” are not. A lot of my skin</Flex>
+              </Box>
+            </Flex>
+            <Flex marginTop={"20px"} border={"1px solid black"}>
+              <Box width={"40%"} marginLeft={"15px"} border={"1px solid red"}>
+                <Flex>drj78.12/22/20</Flex>
+                <Flex>
+                  <AiFillStar />
+                  <AiFillStar />
+                  <AiFillStar />
+                  <AiFillStar />
+                  <AiOutlineStar />
+                </Flex>
+                <Flex>Would you recommend this product?</Flex>
+                <Flex>Was this useful?</Flex>
+                <Flex justifyContent={"space-between"} width={"60%"}> 
+                  <Text>YES</Text>
+                  <Text>NO</Text>
+                  <Text>REPORT</Text>
+                </Flex>
+              </Box>
+              <Box width={"50%"}>
+                <Flex>Loving it!</Flex>
+                <Flex>I am loving this product so far! I definitely feel like my skin is looking better and better each day I take it! I feel like my digestion as been a lot better as well! I would</Flex>
+              </Box>
+            </Flex>
+          </Box>
+        )}
       </Box>
 
-      <Box border="1px solid black" margin="auto" width="50%" marginTop="20px">
-        <Text>About the brand</Text>
+      <Box border="1px solid black" paddingLeft={"15px"} margin="auto" width="60%" marginTop="50px">
+        <Flex fontSize={"20px"} marginBottom={"20px"}>About the brand</Flex>
         <Flex>
-          <h3>R+co</h3>
+          <Box width={"40%"} border={"1px solid red"}>R+co</Box>
           <Text>
-            R+Co is a collective of some of the most renowned hairstylists that
-            have come together to create a line of award-winning vegan products
-            that are treatment-oriented with the health of the hair and scalp
-            top-of-mind. We use unique ingredients and complexes to make sure
-            each product delivers immediate results and true benefits, with all
-            our formulas color-safe, heat and UV protective, vegan,
-            cruelty-free, and gluten-free, without harmful ingredients such as
-            parabens, sulfates (SLS or SLES), mineral oil and petroleum.
+          Our mission is to help you look and feel your absolute best with clean, clinically-proven nutrients for skin, hair, body and mood. We are inspired by nature and guided by science, using carefully sourced, triple-tested ingredients standardized to clinical potency.
           </Text>
         </Flex>
       </Box>

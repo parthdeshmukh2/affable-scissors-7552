@@ -1,11 +1,8 @@
-import React from 'react'
+import React from "react";
+
 
 const Dumy = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default Dumy
+export default Dumy;

@@ -3,6 +3,7 @@ import { Routes , Route} from 'react-router-dom'
 import Dumy from './Dumy'
 import HomePage from './HomePage'
 import NewArrival from './NewArrival'
+import SingleProduct from './SingleProduct'
 
 
 const MainRoutes = () => {
@@ -10,7 +11,8 @@ const MainRoutes = () => {
     <Routes>
         <Route path='/'  element={<HomePage/>}  />
         <Route path='/newarrival'  element={<NewArrival/>}  />
-        <Route path='/Dumy'  element={<Dumy/>}  />
+      
+        
     </Routes>
   )
 }
