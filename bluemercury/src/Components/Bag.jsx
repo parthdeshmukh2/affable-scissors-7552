@@ -14,9 +14,10 @@ const Bag = () => {
 
     const getProduct =()=>{
         dispatch(getproductRequest())
-        return axios.get("http://localhost:8080/products")
+        return axios.get("https://stark-lake-19402.herokuapp.com/cart")
         .then((r)=>{
             dispatch(getproductSuccess(r.data))
+            console.log(r.data);
         })
         .catch((e)=>{
             dispatch(getproductFailure())
