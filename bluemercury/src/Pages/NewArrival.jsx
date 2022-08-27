@@ -1,7 +1,9 @@
 import { Box, Text, Select, Grid } from "@chakra-ui/react";
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 import MainNavbar from "../Components/MainNavbar";
 import ProductCard from "../Components/ProductCard";
 import SideBar from "../Components/SideBar";
@@ -10,15 +12,19 @@ import { getData } from "../Redux/AppReducer/action";
 
 const NewArrival = () => {
   const dispatch = useDispatch();
-  const [name, setName] = useState("NEW ARRIVALS");
-
+ 
+const [name, setName ] = useState("NEW ARRIVAL")
   const product = useSelector((store) => store.AppReducer.productData);
 
+
   useEffect(() => {
-    dispatch(getData());
+   
+      dispatch(getData());
+    
+   
   }, []);
 
-  console.log(product);
+
   return (
     <Box>
       <Box>
@@ -47,7 +53,7 @@ const NewArrival = () => {
 
         <Box w={{ base: "100%", md: "95%" }} h="95%" m="auto" display="flex">
           <Box display={{ base: "none", md: "block" }} w="25%" h="100%">
-            <SideBar />
+            <SideBar  />
           </Box>
 
           <Box w={{ base: "100%", md: "75%" }}>

@@ -8,6 +8,7 @@ import {
   AccordionPanel,
   AccordionIcon,
   Checkbox,
+  CheckboxGroup,
 } from "@chakra-ui/react";
 
 const SideBar = () => {
@@ -65,13 +66,15 @@ const SideBar = () => {
                 </h2>
                 <AccordionPanel pb={4}>
                   <Box display="flex" flexDirection="column">
-                    <Checkbox>BalmLabs</Checkbox>
-                    <Checkbox>Hum Nutrition</Checkbox>
-                    <Checkbox>Oribe</Checkbox>
-                    <Checkbox>Sana Jardin</Checkbox>
-                    <Checkbox>R+Co</Checkbox>
-                    <Checkbox>EltMD</Checkbox>
-                    <Checkbox>Lune+Aster</Checkbox>
+                     
+                    <Checkbox value = "BalmLabs">BalmLabs</Checkbox>
+                    <Checkbox value = "Hum Nutrition">Hum Nutrition</Checkbox>
+                    <Checkbox value = "Oribe">Oribe</Checkbox>
+                    <Checkbox value = "Sana Jardin">Sana Jardin</Checkbox>
+                    <Checkbox value = "R+Co">R+Co</Checkbox>
+                    <Checkbox value = "EltMD">EltMD</Checkbox>
+                    <Checkbox value = "Lune+Aster">Lune+Aster</Checkbox>
+                   
                   </Box>
                 </AccordionPanel>
               </>
