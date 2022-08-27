@@ -23,16 +23,45 @@ const Crousel = () => {
         justifyContent="center"
         border="none"
         mt={{lg:'32'}}
+        textAlign="center"
+        // color={"rgb(96,111,135)"}
+        color={"black"}
+        fontSize="0.3rem" letterSpacing={"1px"}
       >
-        <Text
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+    <Text
           fontFamily="Montserrat Medium,sans-serif"
           fontSize="10px"
           color="gray"
           fontWeight="500"
           letterSpacing="-10%"
-        >
-          FREE SAMPLES WITH ALL ORDERS
-        </Text>
+        >FREE SHIPPING FOR BLUEREWARDS MEMBER</Text> 
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+    <Text
+          fontFamily="Montserrat Medium,sans-serif"
+          fontSize="10px"
+          color="gray"
+          fontWeight="500"
+          letterSpacing="-10%"
+        > FREE GIFTS WITH PURCHASE. BROWSE NOW  </Text> 
+    </div>
+    <div class="carousel-item">
+    <Text
+          fontFamily="Montserrat Medium,sans-serif"
+          fontSize="10px"
+          color="gray"
+          fontWeight="500"
+          letterSpacing="-10%"
+        > FREE SAMPLES WITH ALL ORDERS</Text>
+    </div>
+  </div>
+</div>
+
+
+
       </Box>
       <Swiper
         slidesPerView={1}

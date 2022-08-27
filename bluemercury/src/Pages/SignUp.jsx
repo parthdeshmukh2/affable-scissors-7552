@@ -1,8 +1,10 @@
 import { Box, Button, Input, Text } from "@chakra-ui/react";
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import MainNavbar from "../Components/MainNavbar";
+import {Link as RLink} from "react-router-dom"
+
 
 
 const SignUp = () => {
@@ -10,6 +12,7 @@ const [email, setEmail] = useState("");
 const [pass, setPass] = useState("");
 const [firstName, setFirstName] = useState("");
 const [lastName, setLastName] = useState("");
+const navigate = useNavigate()
 
 const handleSignUp = async () => {
     if(email, pass, firstName, lastName){
@@ -34,6 +37,7 @@ const handleSignUp = async () => {
             alert("SignUp SuccessFull")
 
     }
+  navigate("/login")
 }
   return (
     <Box>
@@ -49,7 +53,7 @@ const handleSignUp = async () => {
     flexDirection="column"
   >
     <Box display="flex">
-      <Text
+<Text
         m="auto"
         fontSize="4xl"
         color="rgb(18,40,76)"

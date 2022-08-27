@@ -1,36 +1,8 @@
-/* 
-.App {
-  text-align: center;
-}
 
-body {
-  width: 95%;
-  background-color: #ffffff;
-  border: 2px solid blue;
-}
-.productsDiv {
-  width: 80%;
-  border: 2px solid green;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 200px);
-  grid-gap: 100px 40px;
-  cursor: pointer;
-  margin-left: 15px;
-}
+ .App {
 
-.productCard{
-  font-size: 14px;
- 
+  background: white;
 }
-.productCard:hover{
- 
-  font-family: Montserrat Medium, sans-serif;
-  font-size: 14px;
- 
-} */
-
-
 
 
 /* Cart */
