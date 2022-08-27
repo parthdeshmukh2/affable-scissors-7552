@@ -4,6 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 // import { Link } from "react-router-dom";
 import { getData } from "../Redux/AppReducer/action";
 
+
+
+
+
 const NewArrival = () => {
   const dispatch = useDispatch();
 
@@ -17,22 +21,10 @@ const NewArrival = () => {
   return (
     <div>
 
-      <Sortbar />
+  
      
 
-      <Flex>
-      <Sidebar/>
-        <div className="productsDiv">
-          {product.map((elem) => (
-            <div key={elem.id} className="productCard">
-              <img src={elem.Image} alt="image" />
-             <h4>{elem.Brand}</h4>
-              <p>{elem.Title}</p>
-              <p>{"$ " + elem.Price}</p>
-            </div>
-          ))}
-        </div>
-      </Flex>
+     
     </div>
   );
 };

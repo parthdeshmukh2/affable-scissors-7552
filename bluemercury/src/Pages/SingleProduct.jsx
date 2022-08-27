@@ -4,7 +4,7 @@ import { Box, Flex, Text, Image, SimpleGrid } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getSingleData } from "../Redux/AppReducer/action";
+// import { getSingleData } from "../Redux/AppReducer/action";
 import SingleProdbottom from "../Components/SingleProdbottom";
 import ProductInfo from "../Components/ProductInfo";
 
@@ -16,19 +16,19 @@ const SingleProduct = () => {
   const [currprod, setCurrprod] = useState({});
   console.log("currprod", currprod);
   const { Iamges } = currprod;
-  console.log(Iamges);
+  // console.log(Iamges);
 
   const [price, setPrice] = useState(0);
-  console.log("price", price);
+  // console.log("price", price);
 
   const [quantity, setQuantity] = useState(1);
 
   const { id } = useParams();
-  console.log("id", id);
+  // console.log("id", id);
 
   useEffect(() => {
     if (product.length === 0);
-    dispatch(getSingleData());
+    // dispatch(getSingleData());
   }, [product.length, dispatch]);
 
   useEffect(() => {
