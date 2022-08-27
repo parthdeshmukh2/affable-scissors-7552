@@ -10,8 +10,7 @@ import styles from "../Styles/Bag.module.css"
 const Bag = () => {
     const dispatch = useDispatch()
     const productdata = useSelector((store)=>store.BagReducer.products)
-    
-
+  
     const getProduct =()=>{
         dispatch(getproductRequest())
         return axios.get("https://stark-lake-19402.herokuapp.com/cart")
@@ -36,7 +35,7 @@ const Bag = () => {
 
    const handleDelete=(id)=>{
        dispatch(deleteProductReq())
-        return axios.delete(`http://localhost:8080/products/${id}`)
+        return axios.delete(`https://stark-lake-19402.herokuapp.com/cart/${id}/delete`)
         .then((r)=>dispatch(deleteProductSuccess()))
         .catch((e)=>dispatch(deleteProductFail()))
     }
@@ -48,7 +47,7 @@ const Bag = () => {
 
     const handleUpdate=(id,payload)=>{
         dispatch(UpdateProductReq())
-        return axios.patch(`http://localhost:8080/products/${id}`,payload)
+        return axios.patch(`https://stark-lake-19402.herokuapp.com/cart/${id}/edit`,payload)
         .then((r)=>{
             dispatch(UpdateProductSuccess())
         })
@@ -58,7 +57,8 @@ const Bag = () => {
     }
 
 
-    const handleChange=(id,amount,qty)=>{
+    const handleChange=(id, amount, qty)=>{
+   
         if((qty+amount)<1)
         {
             handleDelete(id)
@@ -67,8 +67,9 @@ const Bag = () => {
         else
         {
     const payload={
-        qty:qty+amount
+       qty:qty+amount
     }
+    console.log(payload);
     handleUpdate(id,payload)
     .then(()=>getProduct())
     }
@@ -106,11 +107,11 @@ const Bag = () => {
 
                 <Box className={styles.MapleftInBox}>
                     <Box className={styles.mapleftInImgBox}>
-                        <img src={item.image} alt="" style={{width:"100px" , height:"80px"}}/>
+                        <img src={item.Image} alt="" style={{width:"100px" , height:"80px"}}/>
                     </Box>
                     <Box className={styles.mapleftInImgRight}>
-                        <Text className={styles.mapTitleedit}>{item.title}</Text>
-                        <Text className={styles.mapTAboutedit}>{item.about}</Text>
+                        <Text className={styles.mapTitleedit}>{item.Title}</Text>
+                        <Text className={styles.mapTAboutedit}>{item.Description}</Text>
                     </Box>
                 </Box>
 
@@ -121,19 +122,19 @@ const Bag = () => {
 
               <Box className={styles.MapRightInBox}>
 
-                <Box>₹{item.price}</Box>
+                <Box>$ {item.Price}</Box>
 
                 <Box >
                 <Box className={styles.mapBtnBox}>
-                    <Button className={styles.incBtnedit} onClick={()=>handleChange(item.id,1,item.qty)}>+</Button>
-                   <Text style={{padding:"7px 10px" ,border:"1px solid gray" ,borderRadius:"5px"}}>{item.qty}</Text> 
-                    <Button className={styles.decBtnedit}  onClick={()=>handleChange(item.id,-1,item.qty)}>-</Button>
+                    <Button className={styles.incBtnedit} onClick={()=>handleChange(item._id,1,item.Quantity)}>+</Button>
+                   <Text style={{padding:"7px 10px" ,border:"1px solid gray" ,borderRadius:"5px"}} >{item.Quantity}</Text> 
+                    <Button className={styles.decBtnedit}  onClick={()=>handleChange(item._id,-1,item.Quantity)}>-</Button>
                 </Box>
-                <Text className={styles.RemoveEdit} onClick={()=>manageDelete(item.id)}>Remove</Text>
+                <Text className={styles.RemoveEdit} onClick={()=>manageDelete(item._id)}>Remove</Text>
                 </Box>
 
                 <Box>
-                    ₹{item.price*item.qty}
+                    $ {item.Price*item.Quantity}
                 </Box>
 
                 </Box> 
