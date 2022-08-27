@@ -4,6 +4,7 @@ import {
     Menu,
     MenuButton,
     MenuList,
+    Flex,
 } from "@chakra-ui/react"
 
 import styles from "../Styles/RoutineHover.module.css"
@@ -32,7 +33,7 @@ export default function RoutineHover() {
                 <div className={styles.NewMainBox}>
             <div className={styles.NewBox}>
 
-               <div className={styles.NewImgBox}> 
+               <Flex direction="column"  className={styles.NewImgBox}> 
                
                <div className={styles.NewImgBoxSize}>
                 <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/routine-reboot_303x303.jpg?v=1659115615" alt="" style={{height:"100%" ,width:"100%"}}/>
@@ -40,32 +41,32 @@ export default function RoutineHover() {
                
                <p style={{fontWeight:"500"}}>Shop All Routines</p>
 
-               </div>
+               </Flex>
              
 
-               <div className={styles.NewImgBox}> 
+               <Flex direction="column"  className={styles.NewImgBox}> 
                 
                <div className={styles.NewImgBoxSize}>
                 <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/extend_your_summer_glow_2_303x303.jpg?v=1659102162" alt="" style={{height:"100%" ,width:"100%"}}/>
                </div>
                
-               <p style={{fontWeight:"500"}}>The "Extend Your Summer Glow" Routine</p>
+               <a href="/" style={{fontWeight:"500"}}>The "Extend Your Summer Glow" Routine</a>
 
-               <p className={styles.CatPara2}>Ward off dukkness ans boost your glow from head to toe</p>
+               <a href="/" className={styles.CatPara2}>Ward off dukkness ans boost your glow from head to toe</a>
 
-               </div>
+               </Flex>
 
-               <div className={styles.NewCatBox}>
+               <Flex direction="column"  className={styles.NewCatBox}>
                 
-                <p style={{fontWeight:"500"}}>BY ROUTINE</p>
-                <p className={styles.CatPara}>Shop All</p>
-                <p className={styles.CatPara}>Back to School</p>
-                <p className={styles.CatPara}>Extend Your Summer Glow</p>
-                <p className={styles.CatPara}>Get Rid of Summer Sun Damage</p>
-                <p className={styles.CatPara}>Hydration Head-to-Toe</p>
-                <p className={styles.CatPara}>#IWokeUpLikeThis</p>
-                <p className={styles.CatPara}>Out the Door in Five</p>
-               </div>
+                <a href="/" style={{fontWeight:"500"}}>BY ROUTINE</a>
+                <a href="/" className={styles.CatPara}>Shop All</a>
+                <a href="/" className={styles.CatPara}>Back to School</a>
+                <a href="/" className={styles.CatPara}>Extend Your Summer Glow</a>
+                <a href="/" className={styles.CatPara}>Get Rid of Summer Sun Damage</a>
+                <a href="/" className={styles.CatPara}>Hydration Head-to-Toe</a>
+                <a href="/" className={styles.CatPara}>#IWokeUpLikeThis</a>
+                <a href="/" className={styles.CatPara}>Out the Door in Five</a>
+               </Flex>
                </div>
                </div>
             </MenuList>
