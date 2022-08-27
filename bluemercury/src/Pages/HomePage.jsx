@@ -40,6 +40,9 @@ const HomePage = () => {
     </Box>
     <Zitsticka/>
     <FreeGifts/>
+    <Box>
+
+    </Box>
    </Box>
   )
 }
