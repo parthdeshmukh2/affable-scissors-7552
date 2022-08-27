@@ -1,12 +1,13 @@
 import { Box, Button, Input, Text } from "@chakra-ui/react";
 import React, {useState} from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import MainNavbar from "../Components/MainNavbar";
 
 
 const Login = () => {
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
+    const navigate = useNavigate()
 
     const handleLogin = async () =>{
         if(email, pass){
@@ -31,7 +32,7 @@ const Login = () => {
         else{
             console.log("All Fields are required")
         }
-
+        navigate("/")
     }
   return (
     <Box>

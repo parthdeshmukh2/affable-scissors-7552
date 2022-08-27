@@ -77,3 +77,8 @@
     display: flex;
     justify-content: space-around;
 }
+label:hover{
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}

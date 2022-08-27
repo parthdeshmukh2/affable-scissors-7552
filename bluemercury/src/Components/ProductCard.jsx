@@ -27,9 +27,9 @@ const ProductCard = (elem) => {
         </Text>
         <Box h="100%" w="20%" cursor="pointer" onClick={handleWishListItem}>
           {active ? (
-            <AiFillHeart style={{ width: "100%", height: "100%" }} />
+            <AiFillHeart style={{ width: "80%", height: "80%" }} />
           ) : (
-            <RiHeartAddLine style={{ width: "100%", height: "100%" }} />
+            <RiHeartAddLine style={{ width: "80%", height: "80%" }} />
           )}
         </Box>
       </Box>

@@ -49,7 +49,7 @@ export default function ShopHover() {
               </div>
 
               <div className={styles.BrandSecBox}>
-                <p style={{fontWeight:"500"}}>By CATEGORY</p>
+                <p style={{fontWeight:"500"}}>BY CATEGORY</p>
                 <p className={styles.BrandSecPara}>Shop All</p>
                 <p className={styles.BrandSecPara}>Cleansers</p>
                 <p className={styles.BrandSecPara}>Exfoliators & Peels</p>

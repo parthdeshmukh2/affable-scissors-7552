@@ -7,18 +7,62 @@ import NewHover from '../Components/NewHover';
 import EventHover from '../Components/EventsHover';
 import BrandsHover from '../Components/BrandsHover';
 import BlueRewards from '../Components/BlueRewards';
+import {
+    Drawer,
+    DrawerBody,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerCloseButton,Box,Flex,Text,Button, useDisclosure
+  } from '@chakra-ui/react'
+  import {Link as RLink} from "react-router-dom"
 import ExploreHover from '../Components/ExploreHover';
 import RoutineHover from '../Components/RoutineHover';
 import ShopHover from '../Components/ShopHover';
 
 const Navbar = () => {
+    const { isOpen, onOpen, onClose } = useDisclosure()
+const btnRef = React.useRef()
+
   return (
-    <div>
+    <div style={{"color":"rgb(96,111,135)","fontWeight":"600"}}>
         <div className={styles.NavbarBox}>
 
          <div className={styles.NavUpperBox}>
         
         <div className={styles.NavUpprLeftBox}>
+        <Drawer
+        isOpen={isOpen}
+        placement='right'
+        onClose={onClose}
+        finalFocusRef={btnRef}
+      >
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader>YOUR BAG</DrawerHeader>
+<hr />
+          <DrawerBody>
+
+
+         <Text color="rgb(139,150,167)" fontSize={"13px"} fontWeight="600">  FREE RETURNS ON ALL ORDERS </Text>
+
+          </DrawerBody>
+            <hr />
+
+          <DrawerFooter>
+            {/* <Button variant='outline' mr={3} onClick={onClose}>
+              Cancel
+            </Button> */}
+            <Flex direction={"column"} textAlign={"left"}  alignItems="center" >
+            <Text color="rgb(139,150,167)" fontSize={"13px"}> Shipping, Taxes, Beauty Cards, and additional discounts applied at checkout</Text>
+            <Box w="fit-content"  m="10px 0px">
+            <RLink to="/checkout"><Button bg="rgb(18,40,76)" color={"white"} borderRadius="0" p="5px 30px" >VIEW BAG | TOTAL</Button></RLink>            </Box>
+            </Flex>
+          </DrawerFooter>
+        </DrawerContent>
+      </Drawer>
          
          <label><GoLocation size={22} color="rgb(33, 31, 31)"/></label>
          <label className={styles.SpaChn}>STORE & SPA LOCATOR</label>
@@ -32,7 +76,8 @@ const Navbar = () => {
             <label><BsSuitHeart size={22} color="black"/></label>
         </div>
         <div>
-            <label className={styles.WishStyle}>WISHLIST</label>
+            <RLink to="/account">
+            <label className={styles.WishStyle}>WISHLIST</label></RLink>
         </div>
         </div>
 
@@ -50,7 +95,9 @@ const Navbar = () => {
             <label><CgProfile size={22} color="black"/></label>
         </div>
         <div>
-            <label className={styles.WishStyle}>SIGN IN/Up</label>
+        <RLink to="/signup">
+            <label className={styles.WishStyle}>SIGN IN</label>
+            </RLink>
         </div>
         </div>
 
@@ -59,7 +106,7 @@ const Navbar = () => {
             <label><BsHandbag size={22} color="black"/></label>
         </div>
         <div>
-            <label className={styles.WishStyle}>BAG</label>
+            <label className={styles.WishStyle} ref={btnRef} colorScheme='teal' onClick={onOpen}>BAG</label>
         </div>
         </div>
 
@@ -77,7 +124,7 @@ const Navbar = () => {
        <div className={styles.NavbarHoverBox}>
         
        <div>
-        <ShopHover/>
+        <ShopHover   />
        </div>
        <div>
         <NewHover/>

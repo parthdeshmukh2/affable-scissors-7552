@@ -8,9 +8,12 @@ import {
   AccordionPanel,
   AccordionIcon,
   Checkbox,
+
   Radio,
   RadioGroup,
   Stack,
+
+
 } from "@chakra-ui/react";
 import { useSearchParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -85,6 +88,7 @@ const SideBar = ({handleChange}) => {
                 </h2>
                 <AccordionPanel pb={4} >
                   <Box display="flex" flexDirection="column">
+
                    
                   <RadioGroup>
   <Stack>
@@ -99,15 +103,18 @@ const SideBar = ({handleChange}) => {
   </Stack>
          </RadioGroup>
 
-                    {/* <Text value="BalmLabs" onClick={e=>handleChange("BalmLabs")}>BalmLabs</Text>
-                    <Checkbox defaultChecked={category.includes("BalmLabs")} value="BalmLabs" onChange={handleGenreChange}>BalmLabs</Checkbox>
-                    <Text defaultChecked={category.includes("Hum Nutrition")} value="Hum Nutrition" onChange={handleGenreChange}>Hum Nutrition</Text>
-                    <Text defaultChecked={category.includes("Oribe")} value="Oribe" onChange={handleGenreChange}>Oribe</Text>
-                    <Text defaultChecked={category.includes("Sana Jardin")} value="Sana Jardin" onChange={handleGenreChange}>Sana Jardin</Text>
-                    <Text defaultChecked={category.includes("R+Co")} value="R+Co" onChange={handleGenreChange}>R+Co</Text>
-                    <Text defaultChecked={category.includes("EltaMD")} value="EltaMD" onChange={handleGenreChange}>EltaMD</Text>
-                    <Text defaultChecked={category.includes("Lune+Aster")} value="Lune+Aster" onChange={handleGenreChange}>Lune+Aster</Text> */}
-                  </Box> 
+
+                     
+                    <Checkbox value = "BalmLabs">BalmLabs</Checkbox>
+                    <Checkbox value = "Hum Nutrition">Hum Nutrition</Checkbox>
+                    <Checkbox value = "Oribe">Oribe</Checkbox>
+                    <Checkbox value = "Sana Jardin">Sana Jardin</Checkbox>
+                    <Checkbox value = "R+Co">R+Co</Checkbox>
+                    <Checkbox value = "EltMD">EltMD</Checkbox>
+                    <Checkbox value = "Lune+Aster">Lune+Aster</Checkbox>
+                   
+                  </Box>
+
                 </AccordionPanel>
               </>
             )}
