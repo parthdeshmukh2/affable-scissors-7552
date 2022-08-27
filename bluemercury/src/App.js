@@ -1,6 +1,8 @@
 import "./App.css";
+import SideBar from "./Components/SideBar";
 
 import MainRoutes from "./Pages/MainRoutes";
+import NewArrival from "./Pages/NewArrival";
 
 function App() {
   return (
@@ -8,8 +10,8 @@ function App() {
 
      <MainRoutes />
       
-    
-      
+    {/* <SideBar/> */}
+      {/* <NewArrival/> */}
 
     </div>
   )

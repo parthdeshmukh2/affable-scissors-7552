@@ -11,6 +11,7 @@ const ProductCard = (elem) => {
   const handleWishListItem = () => {
     setActive(true);
   };
+ 
   // console.log(Iamges[0]);
 
   return (

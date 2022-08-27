@@ -1,4 +1,4 @@
-import { Box, Text, Select, Grid } from "@chakra-ui/react";
+import { Box, Text, Select, Grid, Button } from "@chakra-ui/react";
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -12,9 +12,55 @@ import { getData } from "../Redux/AppReducer/action";
 
 const NewArrival = () => {
   const dispatch = useDispatch();
+
+  const [data , setData] = useState([])
+
  
 const [name, setName ] = useState("NEW ARRIVAL")
+
   const product = useSelector((store) => store.AppReducer.productData);
+  const [brand , setBrand] = useState("")
+ 
+ 
+  // console.log("store",store)
+  useEffect(()=>{
+    
+      dispatch(getData())
+    // setData(product)
+  },[])
+  useEffect(()=>{
+    
+
+  setData(product)
+},[product])
+
+
+
+
+
+  const handleChange=(e)=>{
+    setBrand(e.target.value)
+    // console.log(brand)
+   
+    }
+   
+
+    const handleSorting=(e)=>{
+      if(e.target.value=="asc")
+      {
+        console.log(e.target.value)
+       let sort= [...data].sort((a,b)=>a.Price-b.Price)
+       setData(sort)
+      }
+      else if(e.target.value=="dsc")
+      {
+        let sort= [...data].sort((a,b)=>b.Price-a.Price)
+       setData(sort)
+      }
+    }
+    
+    console.log(data,"brand")
+  // console.log(product);
 
 
   useEffect(() => {
@@ -53,7 +99,11 @@ const [name, setName ] = useState("NEW ARRIVAL")
 
         <Box w={{ base: "100%", md: "95%" }} h="95%" m="auto" display="flex">
           <Box display={{ base: "none", md: "block" }} w="25%" h="100%">
+
+            <SideBar handleChange={handleChange}/>
+
             <SideBar  />
+
           </Box>
 
           <Box w={{ base: "100%", md: "75%" }}>
@@ -73,7 +123,7 @@ const [name, setName ] = useState("NEW ARRIVAL")
                   fontWeight="400"
                   color="rgb(18,40,76)"
                 >
-                  {name}
+                  New Arrival
                 </Text>
               </Box>
               <Box
@@ -91,10 +141,10 @@ const [name, setName ] = useState("NEW ARRIVAL")
                 >
                   Sort By
                 </Text>
-                <Select placeholder="Featured" w="80%" border="1px solid gray">
-                  <option value="option1">Option 1</option>
-                  <option value="option2">Option 2</option>
-                  <option value="option3">Option 3</option>
+                <Select placeholder="SORTING" w="80%" border="1px solid gray" onChange={handleSorting}>
+                  {/* <Button>Low To High</Button> */}
+                  <option value="asc">Low To High</option>
+                  <option value="dsc">High To Low</option>
                 </Select>
               </Box>
             </Box>
@@ -110,9 +160,14 @@ const [name, setName ] = useState("NEW ARRIVAL")
               mt="8"
               gap="4"
             >
-              {product.map((elem) => (
+              
+              {brand!==""?data.filter(item=>item.Brand==brand).map((elem) => (
+                <ProductCard key={elem._id} {...elem} />
+              ))
+             : data.map((elem) => (
                 <ProductCard key={elem._id} {...elem} />
               ))}
+      
             </Grid>
           </Box>
         </Box>
