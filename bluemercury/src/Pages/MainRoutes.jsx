@@ -7,6 +7,7 @@ import SignUp from "./SignUp";
 import SingleProduct from "./SingleProduct";
 import Wishlist from "../Pages/Wishlist";
 import Checkout from "../Pages/Checkout";
+import BagYaEmpty from "./BagYaEmpty";
 
 const MainRoutes = () => {
   return (
@@ -18,6 +19,7 @@ const MainRoutes = () => {
       <Route path="/signup" element={<SignUp />} />
       <Route path='/wishlist'  element={<Wishlist/>}  />
       <Route path='/checkout'  element={<Checkout/>}  />
+      <Route path='/cart'  element={<BagYaEmpty/>}  />
     </Routes>
   );
 };
