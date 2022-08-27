@@ -1,0 +1,40 @@
+.texts:hover{
+    cursor: pointer;
+    width: 350px;
+    background-color: rgb(18,40,76);
+    color: white;
+  }
+  
+  .skills-section-bars{
+    display: flex;
+  width:100%;
+    justify-content: space-around;
+  }
+  
+  .skills-section-content{
+    margin-top: 20px;
+  }
+  .skills-section-bars span{
+    width: 50%;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  
+  .skills-section-bars span:hover{
+    border-bottom: 2px solid black;
+  
+  }
+  .text{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 10px 0px;
+  }
+  
+  .inputt{
+    border-bottom: 1px solid black;
+    width: 240px;
+    margin: auto;
+  }
+  
