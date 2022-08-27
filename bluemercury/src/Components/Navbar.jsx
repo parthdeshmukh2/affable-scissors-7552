@@ -16,7 +16,7 @@ import {
     DrawerContent,
     DrawerCloseButton,Box,Flex,Text,Button, useDisclosure
   } from '@chakra-ui/react'
-  import {Link as RLink} from "react-router-dom"
+  import {Link as RLink, Navigate, useNavigate} from "react-router-dom"
 import ExploreHover from '../Components/ExploreHover';
 import RoutineHover from '../Components/RoutineHover';
 import ShopHover from '../Components/ShopHover';
@@ -24,6 +24,8 @@ import ShopHover from '../Components/ShopHover';
 const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
 const btnRef = React.useRef()
+
+const navigate = useNavigate();
 
   return (
     <div style={{"color":"rgb(96,111,135)","fontWeight":"600"}}>
@@ -75,7 +77,7 @@ const btnRef = React.useRef()
         <div>
             <label><BsSuitHeart size={22} color="black"/></label>
         </div>
-        <div>
+        <div onClick={()=> navigate('/wishlist')}>
             <RLink to="/account">
             <label className={styles.WishStyle}>WISHLIST</label></RLink>
         </div>
@@ -95,7 +97,7 @@ const btnRef = React.useRef()
             <label><CgProfile size={22} color="black"/></label>
         </div>
         <div>
-        <RLink to="/signup">
+        <RLink to="/login">
             <label className={styles.WishStyle}>SIGN IN</label>
             </RLink>
         </div>
@@ -116,7 +118,7 @@ const btnRef = React.useRef()
          </div>
         
         
-        <div className={styles.blueLogoImg}>
+        <div className={styles.blueLogoImg}  onClick={()=> navigate('/')}>
             <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182" alt="" style={{width:"100%" , height:"100%"}}/>
         </div>
 
