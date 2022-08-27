@@ -16,8 +16,8 @@ const MainRoutes = () => {
       <Route path="/product/:id" element={<SingleProduct />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
-      <Route path='/account'  element={<Wishlist/>}  />
-        <Route path='/checkout'  element={<Checkout/>}  />
+      <Route path='/wishlist'  element={<Wishlist/>}  />
+      <Route path='/checkout'  element={<Checkout/>}  />
     </Routes>
   );
 };
