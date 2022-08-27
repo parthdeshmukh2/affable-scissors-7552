@@ -9,6 +9,7 @@ import FreeGifts from '../Components/FreeGifts';
 import useFetch from '../Hooks/useFetch';
 import { Text } from '@chakra-ui/react';
 import MainNavbar from '../Components/MainNavbar';
+import Footer from '../Components/Footer';
 
 
 const HomePage = () => {
@@ -17,7 +18,7 @@ const HomePage = () => {
   const bestSellers = useFetch("https://stark-lake-19402.herokuapp.com/bestsellers");
 
   return (
-    <Box>
+    <Box fontFamily={"Montserrat Light,sans-serif"}>
       <MainNavbar/>
       
       <Crousel/>
@@ -40,9 +41,7 @@ const HomePage = () => {
     </Box>
     <Zitsticka/>
     <FreeGifts/>
-    <Box>
-
-    </Box>
+    <Footer />
    </Box>
   )
 }
