@@ -4,6 +4,7 @@ import {
     Menu,
     MenuButton,
     MenuList,
+    Flex,
 } from "@chakra-ui/react"
 
 import styles from "../Styles/Shop.module.css"
@@ -32,60 +33,63 @@ export default function ShopHover() {
                 <div className={styles.BrandMainBox}>
             <div className={styles.BrandBox}>
                
-              <div className={styles.BrandFirstBox}>
-                <p style={{fontWeight:"500"}}>SKIN CARE</p>
-                <p className={styles.BrandSecPara}>MAKEUP</p>
-                <p className={styles.BrandSecPara}>HAIR</p>
-                <p className={styles.BrandSecPara}>BATH & BODY</p>
-                <p className={styles.BrandSecPara}>FRAGRANCE</p>
-                <p className={styles.BrandSecPara}>TOOLS & ACCESSORIES</p>
-                <p className={styles.BrandSecPara}>HOME & LIFESTYLE</p>
-                <p className={styles.BrandSecPara}>SUN CARE</p>
-                <p className={styles.BrandSecPara}>MEN</p>
-                <p className={styles.BrandSecPara}>GIFTS</p>
-                <p className={styles.BrandSecPara}>BEST SELLERS</p>
-                <p className={styles.BrandSecPara}>WELLNESS</p>
-                <p className={styles.BrandSecPara}>FREE GIFTS!</p>
-              </div>
+              <Flex className={styles.BrandFirstBox} direction="column">
+                <a href="/" style={{fontWeight:"500"}}>SKIN CARE</a>
+                <a href="/" className={styles.BrandSecPara}>MAKEUP</a>
+                <a href="/" className={styles.BrandSecPara}>HAIR</a>
+                <a href="/" className={styles.BrandSecPara}>BATH & BODY</a>
+                <a href="/" className={styles.BrandSecPara}>FRAGRANCE</a>
+                <a href="/" className={styles.BrandSecPara}>TOOLS & ACCESSORIES</a>
+                <a href="/" className={styles.BrandSecPara}>HOME & LIFESTYLE</a>
+                <a href="/" className={styles.BrandSecPara}>SUN CARE</a>
+                <a href="/" className={styles.BrandSecPara}>MEN</a>
+                <a href="/" className={styles.BrandSecPara}>GIFTS</a>
+                <a href="/" className={styles.BrandSecPara}>BEST SELLERS</a>
+                <a href="/" className={styles.BrandSecPara}>WELLNESS</a>
+                <a href="/" className={styles.BrandSecPara}>FREE GIFTS!</a>
+              </Flex>
 
-              <div className={styles.BrandSecBox}>
-                <p style={{fontWeight:"500"}}>BY CATEGORY</p>
-                <p className={styles.BrandSecPara}>Shop All</p>
-                <p className={styles.BrandSecPara}>Cleansers</p>
-                <p className={styles.BrandSecPara}>Exfoliators & Peels</p>
-                <p className={styles.BrandSecPara}>Eye Care</p>
-                <p className={styles.BrandSecPara}>Lip Care</p>
-                <p className={styles.BrandSecPara}>Masks</p>
-                <p className={styles.BrandSecPara}>Moisturizers</p>
-                <p className={styles.BrandSecPara}>Sun Care</p>
-                <p className={styles.BrandSecPara}>Tools & Devices</p>
-                <p className={styles.BrandSecPara}>Treatment & Serums</p>
-                <p className={styles.BrandSecPara}>Vitamins & Supplements</p>
-                <p className={styles.BrandSecPara}>Value & Gift Sets</p>
-              </div>
+<Flex width={"500px"} justifyContent="space-between" p="0px 20px">
 
-              <div className={styles.BrandSecBox}>
-              <p style={{fontWeight:"500"}}>BY BRAND</p>
-                <p className={styles.BrandSecPara}>111Skin</p>
-                <p className={styles.BrandSecPara}>Augustinus Bader</p>
-                <p className={styles.BrandSecPara}>BalmLabs</p>
-                <p className={styles.BrandSecPara}>Dr. Barbara Sturm</p>
-                <p className={styles.BrandSecPara}>EltaMD</p>
-                <p className={styles.BrandSecPara}>IS Clinical</p>
-                <p className={styles.BrandSecPara}>Kiehl's</p>
-                <p className={styles.BrandSecPara}>La Mer</p>
-                <p className={styles.BrandSecPara}>M-61</p>
-                <p className={styles.BrandSecPara}>OSEA</p>
-                <p className={styles.BrandSecPara}>Révive</p>
-                <p className={styles.BrandSecPara}>SkinCeuticals</p>
-                <p className={styles.BrandSecPara}>Tata Harper</p>
-                <p className={styles.BrandSecPara}>ZitSticka</p>
-              </div>
+              <Flex direction="column" className={styles.BrandSecBox}>
+                <a href="/" style={{fontWeight:"500"}}>BY CATEGORY</a>
+                <a href="/" className={styles.BrandSecPara}>Shop All</a>
+                <a href="/" className={styles.BrandSecPara}>Cleansers</a>
+                <a href="/" className={styles.BrandSecPara}>Exfoliators & Peels</a>
+                <a href="/" className={styles.BrandSecPara}>Eye Care</a>
+                <a href="/" className={styles.BrandSecPara}>Lip Care</a>
+                <a href="/" className={styles.BrandSecPara}>Masks</a>
+                <a href="/" className={styles.BrandSecPara}>Moisturizers</a>
+                <a href="/" className={styles.BrandSecPara}>Sun Care</a>
+                <a href="/" className={styles.BrandSecPara}>Tools & Devices</a>
+                <a href="/" className={styles.BrandSecPara}>Treatment & Serums</a>
+                <a href="/" className={styles.BrandSecPara}>Vitamins & Supplements</a>
+                <a href="/" className={styles.BrandSecPara}>Value & Gift Sets</a>
+              </Flex>
+
+              <Flex direction="column"  className={styles.BrandSecBox}>
+              <a href="/" style={{fontWeight:"500"}}>BY BRAND</a>
+                <a href="/" className={styles.BrandSecPara}>111Skin</a>
+                <a href="/" className={styles.BrandSecPara}>Augustinus Bader</a>
+                <a href="/" className={styles.BrandSecPara}>BalmLabs</a>
+                <a href="/" className={styles.BrandSecPara}>Dr. Barbara Sturm</a>
+                <a href="/" className={styles.BrandSecPara}>EltaMD</a>
+                <a href="/" className={styles.BrandSecPara}>IS Clinical</a>
+                <a href="/" className={styles.BrandSecPara}>Kiehl's</a>
+                <a href="/" className={styles.BrandSecPara}>La Mer</a>
+                <a href="/" className={styles.BrandSecPara}>M-61</a>
+                <a href="/" className={styles.BrandSecPara}>OSEA</a>
+                <a href="/" className={styles.BrandSecPara}>Révive</a>
+                <a href="/" className={styles.BrandSecPara}>SkinCeuticals</a>
+                <a href="/" className={styles.BrandSecPara}>Tata Harper</a>
+                <a href="/" className={styles.BrandSecPara}>ZitSticka</a>
+              </Flex>
+              </Flex>
 
               <div style={{textAlign:"left"}}>
                 <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/powerglow_peel_trial_1_303x303.jpg?v=1659552611" alt="" />
-                <p style={{fontWeight:"500"}}>Best Seller: M-61 PowerGlow® Peel</p>
-                <p style={{fontSize:"14px", color:"gray"}}>Receive a free packette with all purchases while supplies last!</p>
+                <a href="/" style={{fontWeight:"500"}}>Best Seller: M-61 PowerGlow® Peel</a>
+                <a href="/" style={{fontSize:"14px", color:"gray"}}>Receive a free packette with all purchases while supplies last!</a>
               </div>
 
 
