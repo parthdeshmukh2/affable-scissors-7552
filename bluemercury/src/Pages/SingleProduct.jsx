@@ -26,6 +26,8 @@ import {
   GridItem,
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
+import SingleProdbottom from "../Components/SingleProdbottom";
+import ProductReviews from "../Components/ProductReviews";
 
 const SingleProduct = () => {
   const dispatch = useDispatch();
@@ -40,24 +42,22 @@ const SingleProduct = () => {
 
   // console.log(currprod);
 
-   const handleAddToCart = (payload) => {
-     payload = {...payload, Quantity:quantity}
-     
+  const handleAddToCart = (payload) => {
+    payload = { ...payload, Quantity: quantity };
+
     const token = localStorage.getItem("token");
     axios
-        .post("https://stark-lake-19402.herokuapp.com/cart/create", payload, {
-            headers: {
-                token: "Bearer " + token,
-                "Content-Type": "application/json",
-            },
-        })
-        .then((res) => {
-            console.log(res.data)
-        })
-        .catch((err) => console.log(err));
-   
-
-   }
+      .post("https://stark-lake-19402.herokuapp.com/cart/create", payload, {
+        headers: {
+          token: "Bearer " + token,
+          "Content-Type": "application/json",
+        },
+      })
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => console.log(err));
+  };
 
   useEffect(() => {
     if (product.length === 0);
@@ -75,17 +75,17 @@ const SingleProduct = () => {
   const handleWishListItem = (payload) => {
     const token = localStorage.getItem("token");
     axios
-        .post("https://stark-lake-19402.herokuapp.com/wishlist/create", payload, {
-            headers: {
-                token: "Bearer " + token,
-                "Content-Type": "application/json",
-            },
-        })
-        .then((res) => {
-            console.log(res.data)
-        })
-        .catch((err) => console.log(err));
-    setActive(true);
+      .post("https://stark-lake-19402.herokuapp.com/wishlist/create", payload, {
+        headers: {
+          token: "Bearer " + token,
+          "Content-Type": "application/json",
+        },
+      })
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => console.log(err));
+    setActive(!active);
   };
 
   return (
@@ -234,8 +234,8 @@ const SingleProduct = () => {
                 justifyContent="space-between"
                 pl="4"
                 pr="4"
-                cursor='pointer'
-                onClick={()=>handleAddToCart(currprod)}
+                cursor="pointer"
+                onClick={() => handleAddToCart(currprod)}
               >
                 <Box display="flex">
                   <Box color="white">
@@ -281,7 +281,7 @@ const SingleProduct = () => {
                 display="flex"
                 alignItems="center"
                 cursor="pointer"
-                onClick={()=>handleWishListItem(currprod)}
+                onClick={() => handleWishListItem(currprod)}
               >
                 {active ? (
                   <AiFillHeart style={{ width: "50%", height: "50%" }} />
@@ -339,7 +339,7 @@ const SingleProduct = () => {
             </h2>
             <AccordionPanel pb={4}>
               <Text color="gray" fontSize="lg">
-                {currprod.ProductInfo}
+                {currprod.Ingredients}
               </Text>
             </AccordionPanel>
           </AccordionItem>
@@ -360,7 +360,7 @@ const SingleProduct = () => {
             </h2>
             <AccordionPanel pb={4}>
               <Text color="gray" fontSize="lg">
-                {currprod.ProductInfo}
+                {currprod.HowToUse}
               </Text>
             </AccordionPanel>
           </AccordionItem>
@@ -381,8 +381,7 @@ const SingleProduct = () => {
             </h2>
             <AccordionPanel pb={4}>
               <Text color="gray" fontSize="lg">
-                {" "}
-                {currprod.ProductInfo}
+                <ProductReviews />
               </Text>
             </AccordionPanel>
           </AccordionItem>

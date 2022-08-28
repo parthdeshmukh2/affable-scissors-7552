@@ -39,9 +39,9 @@ export default function EventHover() {
                 <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/masterclass-bluemercury_303x303_8b06250d-4cc8-431d-8217-688769352c79_303x303.webp?v=1659551087" alt="" style={{height:"100%" ,width:"100%"}}/>
                </div>
                
-               <p>Bluemercury Presents: #Masterclass</p>
+               <a href="/">Bluemercury Presents: #Masterclass</a>
 
-               <p className={styles.CatPara2}>Join us for live virtual shopping events</p>
+               <a href="/" className={styles.CatPara2}>Join us for live virtual shopping events</a>
 
                </div>
              
@@ -54,7 +54,7 @@ export default function EventHover() {
                
                <p>Complimentary Consulations!</p>
 
-               <p className={styles.CatPara2}>Book your one-on-one appointment at your local store</p>
+               <a href="/" className={styles.CatPara2}>Book your one-on-one appointment at your local store</a>
 
                </div>
                </div>

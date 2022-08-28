@@ -4,6 +4,7 @@ import {
     Menu,
     MenuButton,
     MenuList,
+    Flex,
 } from "@chakra-ui/react"
 import { Link } from "react-router-dom"
 
@@ -33,20 +34,20 @@ export default function NewHover() {
                 <div className={styles.NewMainBox}>
             <div className={styles.NewBox}>
                
-               <div className={styles.NewCatBox}>
+               <Flex direction="column"  className={styles.NewCatBox}>
                 
-                <p style={{fontWeight:"500"}}>BY CATEGORY</p>
-                <p className={styles.CatPara}>Shop All</p>
-                <p className={styles.CatPara}>Skincare</p>
-                <p className={styles.CatPara}>Makeup</p>
-                <p className={styles.CatPara}>Hair</p>
-                <p className={styles.CatPara}>Bath & Body</p>
-                <p className={styles.CatPara}>Fragrance</p>
-                <p className={styles.CatPara}>Tools & Accessories</p>
-                <p className={styles.CatPara}>Wellness</p>
-                <p className={styles.CatPara}>Gifts</p>
-                <p className={styles.CatPara}>Wedding Essentials</p>
-               </div>
+                <a href="/" style={{fontWeight:"500"}}>BY CATEGORY</a>
+                <a href="/" className={styles.CatPara}>Shop All</a>
+                <a href="/" className={styles.CatPara}>Skincare</a>
+                <a href="/" className={styles.CatPara}>Makeup</a>
+                <a href="/" className={styles.CatPara}>Hair</a>
+                <a href="/" className={styles.CatPara}>Bath & Body</a>
+                <a href="/" className={styles.CatPara}>Fragrance</a>
+                <a href="/" className={styles.CatPara}>Tools & Accessories</a>
+                <a href="/" className={styles.CatPara}>Wellness</a>
+                <a href="/" className={styles.CatPara}>Gifts</a>
+                <a href="/" className={styles.CatPara}>Wedding Essentials</a>
+               </Flex>
 
                <div className={styles.NewImgBox}> 
                
@@ -54,9 +55,9 @@ export default function NewHover() {
                 <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/zitsticka_navigation_303x303.jpg?v=1659549528" alt="" style={{height:"100%" ,width:"100%"}}/>
                </div>
                
-               <p style={{fontWeight:"500"}}>New Brand Alert: ZitSticka</p>
+               <a href="/" style={{fontWeight:"500"}}>New Brand Alert: ZitSticka</a>
 
-               <p className={styles.CatPara2}>Treat and prevent all kinds of breakout</p>
+               <a href="/" className={styles.CatPara2}>Treat and prevent all kinds of breakout</a>
 
                </div>
              

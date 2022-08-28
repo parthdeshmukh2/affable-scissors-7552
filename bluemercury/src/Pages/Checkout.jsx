@@ -2,6 +2,8 @@ import { Flex, Box, Image, Text, Input } from "@chakra-ui/react";
 import { Checkbox, CheckboxGroup, Button } from "@chakra-ui/react";
 import React from "react";
 
+import { Link as RLink } from "react-router-dom";
+
 const Checkout = () => {
   return (
     <Box width={"9xl"} color={"rgb(98,98,98)"}>
@@ -111,7 +113,6 @@ const Checkout = () => {
               <Box
                 w="80%"
                 border={"2px solid rgb(98,98,98)"}
-                
                 p="0px 8px"
                 borderRadius={"5px"}
                 m="15px 0px"
@@ -175,6 +176,32 @@ const Checkout = () => {
 Shipping	Calculated at next step
 Total	USD $118.00*/}
           </Flex>
+
+          <Flex
+            w="100%"
+            justifyContent={"space-between"}
+            m="20px auto 10px auto"
+          >
+            <Text fontSize={"16px"}>
+              {" "}
+              <b> Total </b>
+            </Text>
+            <Text fontSize={"16px"}>
+              USD <b> $118.00</b>
+            </Text>
+          </Flex>
+          <RLink to="/payments">
+            <Button
+              bg="rgb(18,40,76)"
+              color={"white"}
+              letterSpacing="0.5px"
+              m="20px auto"
+              borderRadius="0"
+              p="10px 30px"
+            >
+              CONTINUE PAYMENT
+            </Button>
+          </RLink>
         </Box>
       </Flex>
     </Box>
