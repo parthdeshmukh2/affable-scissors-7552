@@ -4,17 +4,47 @@ import { useState } from "react";
 import { RiHeartAddLine } from "react-icons/ri";
 import { AiFillHeart } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { useSelector } from "react-redux";
+import { Spinner } from '@chakra-ui/react'
+import useFetch from "../Hooks/useFetch";
 
 const ProductCard = (elem) => {
   const { Title } = elem;
   const [active, setActive] = useState(false);
-  const handleWishListItem = () => {
-    setActive(true);
-  };
+  const {isLoding} = useFetch('https://stark-lake-19402.herokuapp.com/newarrival')
+ 
+
  
   // console.log(Iamges[0]);
 
+  const handleAddToWishList = (payload) => {
+    payload = {...payload, Quantity:1}
+    setActive(true);
+    
+   const token = localStorage.getItem("token");
+   axios
+       .post("https://stark-lake-19402.herokuapp.com/wishlist/create", payload, {
+           headers: {
+               token: "Bearer " + token,
+               "Content-Type": "application/json",
+           },
+       })
+       .then((res) => {
+           console.log(res.data, "added")
+           alert("Item Added To WishList")
+        
+       })
+       .catch((err) => console.log(err));
+  
+  
+  }
+
+
   return (
+    
+   
+    
     <Box h="350px" boxShadow="xl" borderRadius="4">
       <Box
         display="flex"
@@ -25,11 +55,11 @@ const ProductCard = (elem) => {
         <Text color="gray" fontWeight="500" fontSize="sm">
           New
         </Text>
-        <Box h="100%" w="20%" cursor="pointer" onClick={handleWishListItem}>
+        <Box h="100%" w="20%" cursor="pointer" onClick={()=>handleAddToWishList(elem)}>
           {active ? (
             <AiFillHeart style={{ width: "80%", height: "80%" }} />
           ) : (
-            <RiHeartAddLine style={{ width: "80%", height: "80%" }} />
+            <RiHeartAddLine style={{ width: "80%", height: "80%" }}  />
           )}
         </Box>
       </Box>
@@ -56,7 +86,9 @@ const ProductCard = (elem) => {
         </Box>
       </Link>
     </Box>
+       
   );
+          
 };
 
 export default ProductCard;
