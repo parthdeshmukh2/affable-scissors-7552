@@ -7,7 +7,11 @@ import SignUp from "./SignUp";
 import SingleProduct from "./SingleProduct";
 import Wishlist from "../Pages/Wishlist";
 import Checkout from "../Pages/Checkout";
+
+import BagYaEmpty from "./BagYaEmpty";
+
 import Payments from "./Payments";
+
 
 const MainRoutes = () => {
   return (
@@ -17,9 +21,15 @@ const MainRoutes = () => {
       <Route path="/product/:id" element={<SingleProduct />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
-      <Route path='/account'  element={<Wishlist/>}  />
+
+      <Route path='/wishlist'  element={<Wishlist/>}  />
+      <Route path='/checkout'  element={<Checkout/>}  />
+      <Route path='/cart'  element={<BagYaEmpty/>}  />
+
+   
       <Route path='/payments'  element={<Payments/>}  />
-        <Route path='/checkout'  element={<Checkout/>}  />
+
+
     </Routes>
   );
 };

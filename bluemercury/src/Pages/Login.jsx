@@ -1,6 +1,7 @@
 import { Box, Button, Input, Stack, Text } from "@chakra-ui/react";
 import React, {useState} from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Footer from "../Components/Footer";
 import MainNavbar from "../Components/MainNavbar";
 
 
@@ -169,6 +170,9 @@ position='absolute'
           </Text>
         </Link>
       </Box>
+    </Box>
+    <Box position='absolute' mt='550px' w='100%'>
+      <Footer/>
     </Box>
     </Box>
     </Stack>

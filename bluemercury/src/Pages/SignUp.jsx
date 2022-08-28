@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import MainNavbar from "../Components/MainNavbar";
 import {Link as RLink} from "react-router-dom"
+import Footer from "../Components/Footer";
 
 
 
@@ -202,6 +203,9 @@ const handleSignUp = async () => {
       </Link>
     </Box>
   </Box>
+  <Box position='absolute' mt='650px' w='100%'>
+      <Footer/>
+    </Box>
   </Box>
   </Stack>
   )
