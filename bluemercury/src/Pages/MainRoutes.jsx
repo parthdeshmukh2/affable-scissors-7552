@@ -9,6 +9,7 @@ import Wishlist from "../Pages/Wishlist";
 import Checkout from "../Pages/Checkout";
 
 import BagYaEmpty from "./BagYaEmpty";
+import MakeUp from "./MakeUp";
 
 import Payments from "./Payments";
 
@@ -26,8 +27,12 @@ const MainRoutes = () => {
       <Route path='/checkout'  element={<Checkout/>}  />
       <Route path='/cart'  element={<BagYaEmpty/>}  />
 
+      <Route  path='/makeup' element={<MakeUp/>} />
+
+
    
       <Route path='/payments'  element={<Payments/>}  />
+
 
 
     </Routes>

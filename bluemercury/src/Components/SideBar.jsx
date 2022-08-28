@@ -15,9 +15,11 @@ import {
 
 
 } from "@chakra-ui/react";
-import { useSearchParams } from "react-router-dom";
+// import { useNavigate, useSearchParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getData } from "../Redux/AppReducer/action";
+import { useNavigate } from "react-router-dom";
+import Footer from "./Footer";
 
 const SideBar = ({handleChange}) => {
 
@@ -29,7 +31,7 @@ const SideBar = ({handleChange}) => {
   useEffect(()=>{
     dispatch(getData())
   },[])
-
+  const navigate = useNavigate();
 
 
 
@@ -47,8 +49,11 @@ const SideBar = ({handleChange}) => {
           </Text>
         </Box>
         <Box display="flex" flexDirection="column" mt="2">
-          <Text color="gray" fontSize="15px" cursor="pointer">
+          <Text color="gray" fontSize="15px" cursor="pointer" onClick={()=> navigate('/makeup') }>
             Make Up
+          </Text>
+          <Text color="gray" fontSize="15px" cursor="pointer" onClick={()=> navigate('/newarrival') }>
+           New Arrival
           </Text>
           <Text color="gray" fontSize="15px" cursor="pointer">
             Bath & Body
@@ -260,6 +265,7 @@ const SideBar = ({handleChange}) => {
           </AccordionItem>
         </Accordion>
       </Box>
+      
     </Box>
   );
 };

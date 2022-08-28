@@ -12,7 +12,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 
-const Logo = (props: any) => {
+const Logo = (props) => {
   return (
     <svg
       height={32}

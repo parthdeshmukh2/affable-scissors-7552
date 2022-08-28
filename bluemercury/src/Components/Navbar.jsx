@@ -13,6 +13,7 @@ import {
     DrawerFooter,
     DrawerHeader,
     DrawerOverlay,
+    Image,
     DrawerContent,
     DrawerCloseButton,Box,Flex,Text,Button, useDisclosure
   } from '@chakra-ui/react'
@@ -20,12 +21,20 @@ import {
 import ExploreHover from '../Components/ExploreHover';
 import RoutineHover from '../Components/RoutineHover';
 import ShopHover from '../Components/ShopHover';
+import useFetch from '../Hooks/useFetch';
 
 const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
 const btnRef = React.useRef()
 
 const navigate = useNavigate();
+const cartData = useFetch('https://stark-lake-19402.herokuapp.com/cart');
+console.log(cartData.data, "cartData");
+
+const goToCart = () => {
+  navigate('/cart');
+}
+
 
   return (
     <div style={{"color":"rgb(96,111,135)","fontWeight":"600"}}>
@@ -50,6 +59,27 @@ const navigate = useNavigate();
 
          <Text color="rgb(139,150,167)" fontSize={"13px"} fontWeight="600">  FREE RETURNS ON ALL ORDERS </Text>
 
+           <Box display='flex' flexDirection='column' w='100%' h='100%' >
+            {cartData.data.map((elem, index)=> {
+              return (
+                
+                  <Box key={index} w='100%'mt='4' display='flex' boxShadow='xl' p='2' cursor='pointer'>
+                   <Box w='25%' h='100px' >
+                     <Image   src={elem.Image} w='100%' h='100%' />
+                     </Box>
+                     <Box ml='2' w='50%'>
+                       <Text fontWeight='500'>{elem.Brand}</Text>
+                       <Text fontSize='12px'>{elem.Title}</Text>
+                       </Box>
+                       <Box>
+                         <Text>$ {elem.Price}</Text>
+                         </Box>
+                  </Box>
+              )
+            })}
+
+           </Box>
+
           </DrawerBody>
             <hr />
 
@@ -57,7 +87,7 @@ const navigate = useNavigate();
             {/* <Button variant='outline' mr={3} onClick={onClose}>
               Cancel
             </Button> */}
-            <Flex direction={"column"} textAlign={"left"}  alignItems="center" >
+            <Flex direction={"column"} textAlign={"left"}  alignItems="center"  onClick={goToCart}>
             <Text color="rgb(139,150,167)" fontSize={"13px"}> Shipping, Taxes, Beauty Cards, and additional discounts applied at checkout</Text>
             <Box w="fit-content"  m="10px 0px">
             <RLink to="/checkout"><Button bg="rgb(18,40,76)" color={"white"} borderRadius="0" p="5px 30px" >VIEW BAG | TOTAL</Button></RLink>            </Box>

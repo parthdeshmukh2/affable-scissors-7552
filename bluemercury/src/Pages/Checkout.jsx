@@ -1,13 +1,9 @@
-
 import { Flex, Box, Image, Text, Input } from "@chakra-ui/react";
 import { Checkbox, CheckboxGroup, Button } from "@chakra-ui/react";
 import React, { useState } from "react";
 import useFetch from "../Hooks/useFetch"
 
-
-import {Link as RLink} from "react-router-dom"
-
-
+import { Link as RLink } from "react-router-dom";
 
 const Checkout = () => {
   const [code , setCode] = useState("")
@@ -144,7 +140,7 @@ const Checkout = () => {
             <Flex alignItems={"center"} w="100%">
               <Box
                 w="80%"
-                
+
                 p="0px 8px"
                 borderRadius={"5px"}
                 m="15px 0px"
@@ -182,7 +178,6 @@ const Checkout = () => {
 
             <Box border={"1px solid rgb(222,222,222)"} w="100%" />
 
-
             <Flex
               w="100%"
               justifyContent={"space-between"}
@@ -201,6 +196,7 @@ Shipping	Calculated at next step
 Total	USD $118.00*/}
           </Flex>
 
+
  
   <RLink to="/payments">
         <Button bg="rgb(18,40,76)" color={"white"} letterSpacing="0.5px" m="20px auto" borderRadius="0" p="10px 30px" >CONTINUE PAYMENT</Button></RLink>
@@ -208,6 +204,33 @@ Total	USD $118.00*/}
 
 
        
+
+          <Flex
+            w="100%"
+            justifyContent={"space-between"}
+            m="20px auto 10px auto"
+          >
+            <Text fontSize={"16px"}>
+              {" "}
+              <b> Total </b>
+            </Text>
+            <Text fontSize={"16px"}>
+              USD <b> $118.00</b>
+            </Text>
+          </Flex>
+          <RLink to="/payments">
+            <Button
+              bg="rgb(18,40,76)"
+              color={"white"}
+              letterSpacing="0.5px"
+              m="20px auto"
+              borderRadius="0"
+              p="10px 30px"
+            >
+              CONTINUE PAYMENT
+            </Button>
+          </RLink>
+
         </Box>
         
       </Flex>
