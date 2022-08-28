@@ -7,6 +7,7 @@ import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { BsFillBagPlusFill } from "react-icons/bs";
 import { RiHeartAddLine } from "react-icons/ri";
 import { AiFillHeart } from "react-icons/ai";
+import axios from "axios";
 import {
   Box,
   Text,
@@ -37,7 +38,26 @@ const SingleProduct = () => {
   const [price, setPrice] = useState(0);
   const [quantity, setQuantity] = useState(1);
 
-  console.log(currprod);
+  // console.log(currprod);
+
+   const handleAddToCart = (payload) => {
+     payload = {...payload, Quantity:quantity}
+     
+    const token = localStorage.getItem("token");
+    axios
+        .post("https://stark-lake-19402.herokuapp.com/cart/create", payload, {
+            headers: {
+                token: "Bearer " + token,
+                "Content-Type": "application/json",
+            },
+        })
+        .then((res) => {
+            console.log(res.data)
+        })
+        .catch((err) => console.log(err));
+   
+
+   }
 
   useEffect(() => {
     if (product.length === 0);
@@ -52,7 +72,19 @@ const SingleProduct = () => {
     }
   }, [id, product]);
 
-  const handleWishListItem = () => {
+  const handleWishListItem = (payload) => {
+    const token = localStorage.getItem("token");
+    axios
+        .post("https://stark-lake-19402.herokuapp.com/wishlist/create", payload, {
+            headers: {
+                token: "Bearer " + token,
+                "Content-Type": "application/json",
+            },
+        })
+        .then((res) => {
+            console.log(res.data)
+        })
+        .catch((err) => console.log(err));
     setActive(true);
   };
 
@@ -202,6 +234,8 @@ const SingleProduct = () => {
                 justifyContent="space-between"
                 pl="4"
                 pr="4"
+                cursor='pointer'
+                onClick={()=>handleAddToCart(currprod)}
               >
                 <Box display="flex">
                   <Box color="white">
@@ -247,7 +281,7 @@ const SingleProduct = () => {
                 display="flex"
                 alignItems="center"
                 cursor="pointer"
-                onClick={handleWishListItem}
+                onClick={()=>handleWishListItem(currprod)}
               >
                 {active ? (
                   <AiFillHeart style={{ width: "50%", height: "50%" }} />
