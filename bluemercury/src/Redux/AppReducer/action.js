@@ -4,10 +4,10 @@ import { useEffect } from "react";
 
 
 
-export const getData = () => (dispatch) => {
+export const getData = (url) => (dispatch) => {
   dispatch({ type: types.GET_DATA_REQUEST });
 
-  return axios.get("https://stark-lake-19402.herokuapp.com/newarrival")
+  return axios.get(url)
     .then((res) => {
       dispatch({ type: types.GET_DATA_SUCCESS, payload: res.data });
       // console.log(res.data)
