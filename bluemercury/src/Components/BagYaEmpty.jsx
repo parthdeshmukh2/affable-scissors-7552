@@ -6,6 +6,8 @@ import  { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getproductFailure, getproductRequest, getproductSuccess } from '../Redux/BagReducer/action'
 import EmptyBag from './EmptyBag'
+import MainNavbar from './MainNavbar'
+import Footer from './Footer'
 
 
 const BagYaEmpty = () => {
@@ -29,7 +31,14 @@ const BagYaEmpty = () => {
     },[])
   return (
     <div>
-        {productdata.length>0 ? <Bag/> : <EmptyBag/>}
+        <Box>
+        <MainNavbar/>
+        </Box>
+        {productdata.length>0 ?<Bag/>:<EmptyBag/> }
+
+        <Box>
+        <Footer/>
+        </Box>
     </div>
   )
 }

@@ -1,7 +1,8 @@
 
 import { Flex, Box, Image, Text, Input } from "@chakra-ui/react";
 import { Checkbox, CheckboxGroup, Button } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
+import useFetch from "../Hooks/useFetch"
 
 
 import {Link as RLink} from "react-router-dom"
@@ -9,6 +10,33 @@ import {Link as RLink} from "react-router-dom"
 
 
 const Checkout = () => {
+  const [code , setCode] = useState("")
+  const cartItem = useFetch("https://stark-lake-19402.herokuapp.com/cart")
+  const productdata = cartItem.data
+  console.log(cartItem.data)
+
+
+  var total = productdata.reduce(function(sum,el){
+    if(code=="MASAI")
+    {
+      return (sum+(Number(el.Price)*Number(el.Quantity))*0.7)
+    }
+    return sum+(Number(el.Price)*Number(el.Quantity))
+   },0)
+
+  //  const [subTotal , setSubTotal] = useState(total)
+  //  console.log(subTotal)
+
+  const handleDiscount=()=>{
+  if(code=="MASAI")
+  {
+    total=total*0.7
+    console.log(total)
+  }
+  else{
+   alert("Wrong Coupon Code")
+  }
+   }
   return (
     <Box width={"9xl"} color={"rgb(98,98,98)"}>
       <Flex flexDirection={["column", "column", "row"]}>
@@ -116,26 +144,15 @@ const Checkout = () => {
             <Flex alignItems={"center"} w="100%">
               <Box
                 w="80%"
-                border={"2px solid rgb(98,98,98)"}
                 
                 p="0px 8px"
                 borderRadius={"5px"}
                 m="15px 0px"
               >
-                <Text fontSize={"10px"} w="100%" textAlign="left">
+                {/* <Text fontSize={"10px"} w="100%" textAlign="left">
                   GIFT CARD OR DISCOUNT CODE
-                </Text>
-                <input
-                  type="text"
-                  w="100%"
-                  placeholder="GIFT CARD/PROMO CODE"
-                  style={{
-                    width: "102%",
-                    border: "none",
-                    background: "rgb(248,248,248)",
-                    fontSize: "12px",
-                  }}
-                />
+                </Text> */}
+                <Input w="100%" border="3px solid gray"  placeholder="Apply Coupon Code"  onChange={(e)=>setCode(e.target.value)}/>
               </Box>
               <Button
                 w="40%"
@@ -144,6 +161,7 @@ const Checkout = () => {
                 letterSpacing="0.5px"
                 borderRadius="0"
                 p="10px 30px"
+                onClick={handleDiscount}
               >
                 APPLY
               </Button>
@@ -155,11 +173,11 @@ const Checkout = () => {
               m="20px auto 10px auto"
             >
               <Text fontSize={"15px"}>Subtotal</Text>
-              <Text>$118.00</Text>
+              <Text>$ {total}</Text>
             </Flex>
             <Flex w="100%" justifyContent={"space-between"} mb="20px">
               <Text fontSize={"15px"}>Shipping </Text>
-              <Text fontSize={"11px"}>Calculated at next step</Text>
+              <Text fontSize={"15px"}>$ 0</Text>
             </Flex>
 
             <Box border={"1px solid rgb(222,222,222)"} w="100%" />
@@ -175,7 +193,7 @@ const Checkout = () => {
                 <b> Total </b>
               </Text>
               <Text fontSize={"16px"}>
-                USD <b> $118.00</b>
+                USD <b> $ {total}</b>
               </Text>
             </Flex>
             {/* Subtotal	$118.00
@@ -183,18 +201,18 @@ Shipping	Calculated at next step
 Total	USD $118.00*/}
           </Flex>
 
-<Flex w="100%" justifyContent={"space-between"}  m="20px auto 10px auto">
-<Text fontSize={"16px"}> <b> Total	</b></Text>
-<Text fontSize={"16px"}>USD <b> $118.00</b></Text>
-  </Flex>  
+ 
   <RLink to="/payments">
         <Button bg="rgb(18,40,76)" color={"white"} letterSpacing="0.5px" m="20px auto" borderRadius="0" p="10px 30px" >CONTINUE PAYMENT</Button></RLink>
-        </Flex>
+        
 
 
+       
         </Box>
+        
       </Flex>
     </Box>
+    
   );
 };
 

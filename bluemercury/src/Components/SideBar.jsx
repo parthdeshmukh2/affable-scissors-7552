@@ -103,15 +103,6 @@ const SideBar = ({handleChange}) => {
   </Stack>
          </RadioGroup>
 
-
-                     
-                    <Checkbox value = "BalmLabs">BalmLabs</Checkbox>
-                    <Checkbox value = "Hum Nutrition">Hum Nutrition</Checkbox>
-                    <Checkbox value = "Oribe">Oribe</Checkbox>
-                    <Checkbox value = "Sana Jardin">Sana Jardin</Checkbox>
-                    <Checkbox value = "R+Co">R+Co</Checkbox>
-                    <Checkbox value = "EltMD">EltMD</Checkbox>
-                    <Checkbox value = "Lune+Aster">Lune+Aster</Checkbox>
                    
                   </Box>
 
@@ -139,13 +130,18 @@ const SideBar = ({handleChange}) => {
                 </h2>
                 <AccordionPanel pb={4}>
                   <Box display="flex" flexDirection="column">
-                    <Checkbox>BalmLabs</Checkbox>
-                    <Checkbox>Hum Nutrition</Checkbox>
-                    <Checkbox>Oribe</Checkbox>
-                    <Checkbox>Sana Jardin</Checkbox>
-                    <Checkbox>R+Co</Checkbox>
-                    <Checkbox>EltMD</Checkbox>
-                    <Checkbox>Lune+Aster</Checkbox>
+                  <RadioGroup>
+  <Stack>
+    <Radio value='' onChange={handleChange}>ALL</Radio>
+    <Radio value='BalmLabs' onChange={handleChange}>BalmLabs</Radio>
+    <Radio value='Hum Nutrition' onChange={handleChange}>Hum Nutrition</Radio>
+    <Radio value='Oribe' onChange={handleChange}>Oribe</Radio>
+    <Radio value='Sana Jardin' onChange={handleChange}>Sana Jardin</Radio>
+    <Radio value='R+Co' onChange={handleChange}>R+Co</Radio>
+    <Radio value='EltaMD' onChange={handleChange}>EltaMD</Radio>
+    <Radio value='Lune+Aster' onChange={handleChange}>Lune+Aster</Radio>
+  </Stack>
+         </RadioGroup>
                   </Box>
                 </AccordionPanel>
               </>
@@ -171,13 +167,18 @@ const SideBar = ({handleChange}) => {
                 </h2>
                 <AccordionPanel pb={4}>
                   <Box display="flex" flexDirection="column">
-                    <Checkbox>BalmLabs</Checkbox>
-                    <Checkbox>Hum Nutrition</Checkbox>
-                    <Checkbox>Oribe</Checkbox>
-                    <Checkbox>Sana Jardin</Checkbox>
-                    <Checkbox>R+Co</Checkbox>
-                    <Checkbox>EltMD</Checkbox>
-                    <Checkbox>Lune+Aster</Checkbox>
+                  <RadioGroup>
+  <Stack>
+    <Radio value='' onChange={handleChange}>ALL</Radio>
+    <Radio value='BalmLabs' onChange={handleChange}>BalmLabs</Radio>
+    <Radio value='Hum Nutrition' onChange={handleChange}>Hum Nutrition</Radio>
+    <Radio value='Oribe' onChange={handleChange}>Oribe</Radio>
+    <Radio value='Sana Jardin' onChange={handleChange}>Sana Jardin</Radio>
+    <Radio value='R+Co' onChange={handleChange}>R+Co</Radio>
+    <Radio value='EltaMD' onChange={handleChange}>EltaMD</Radio>
+    <Radio value='Lune+Aster' onChange={handleChange}>Lune+Aster</Radio>
+  </Stack>
+         </RadioGroup>
                   </Box>
                 </AccordionPanel>
               </>
@@ -203,13 +204,18 @@ const SideBar = ({handleChange}) => {
                 </h2>
                 <AccordionPanel pb={4}>
                   <Box display="flex" flexDirection="column">
-                    <Checkbox>BalmLabs</Checkbox>
-                    <Checkbox>Hum Nutrition</Checkbox>
-                    <Checkbox>Oribe</Checkbox>
-                    <Checkbox>Sana Jardin</Checkbox>
-                    <Checkbox>R+Co</Checkbox>
-                    <Checkbox>EltMD</Checkbox>
-                    <Checkbox>Lune+Aster</Checkbox>
+                  <RadioGroup>
+  <Stack>
+    <Radio value='' onChange={handleChange}>ALL</Radio>
+    <Radio value='BalmLabs' onChange={handleChange}>BalmLabs</Radio>
+    <Radio value='Hum Nutrition' onChange={handleChange}>Hum Nutrition</Radio>
+    <Radio value='Oribe' onChange={handleChange}>Oribe</Radio>
+    <Radio value='Sana Jardin' onChange={handleChange}>Sana Jardin</Radio>
+    <Radio value='R+Co' onChange={handleChange}>R+Co</Radio>
+    <Radio value='EltaMD' onChange={handleChange}>EltaMD</Radio>
+    <Radio value='Lune+Aster' onChange={handleChange}>Lune+Aster</Radio>
+  </Stack>
+         </RadioGroup>
                   </Box>
                 </AccordionPanel>
               </>
@@ -235,13 +241,18 @@ const SideBar = ({handleChange}) => {
                 </h2>
                 <AccordionPanel pb={4}>
                   <Box display="flex" flexDirection="column">
-                    <Checkbox>BalmLabs</Checkbox>
-                    <Checkbox>Hum Nutrition</Checkbox>
-                    <Checkbox>Oribe</Checkbox>
-                    <Checkbox>Sana Jardin</Checkbox>
-                    <Checkbox>R+Co</Checkbox>
-                    <Checkbox>EltMD</Checkbox>
-                    <Checkbox>Lune+Aster</Checkbox>
+                  <RadioGroup>
+  <Stack>
+    <Radio value='' onChange={handleChange}>ALL</Radio>
+    <Radio value='BalmLabs' onChange={handleChange}>BalmLabs</Radio>
+    <Radio value='Hum Nutrition' onChange={handleChange}>Hum Nutrition</Radio>
+    <Radio value='Oribe' onChange={handleChange}>Oribe</Radio>
+    <Radio value='Sana Jardin' onChange={handleChange}>Sana Jardin</Radio>
+    <Radio value='R+Co' onChange={handleChange}>R+Co</Radio>
+    <Radio value='EltaMD' onChange={handleChange}>EltaMD</Radio>
+    <Radio value='Lune+Aster' onChange={handleChange}>Lune+Aster</Radio>
+  </Stack>
+         </RadioGroup>
                   </Box>
                 </AccordionPanel>
               </>

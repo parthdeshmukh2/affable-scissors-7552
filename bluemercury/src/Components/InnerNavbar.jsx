@@ -14,6 +14,7 @@ import {
     MenuDivider,
   } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
+import { Link } from 'react-router-dom'
 
 const InnerNavbar = () => {
   return (
@@ -28,13 +29,14 @@ const InnerNavbar = () => {
     icon={<HamburgerIcon />}
     variant='outline'
   />
-  <MenuList>
+  <MenuList zIndex={99}>
     <MenuItem >
       SHOP
     </MenuItem>
-    <MenuItem>
+   <Link to="/newarrival"> <MenuItem>
       NEW!
     </MenuItem>
+    </Link>
     <MenuItem>
       BRANDS
     </MenuItem>
