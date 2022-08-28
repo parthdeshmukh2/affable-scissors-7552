@@ -11,13 +11,13 @@ import SideBar from "../Components/SideBar";
 // import { Link } from "react-router-dom";
 import { getData } from "../Redux/AppReducer/action";
 
-const NewArrival = () => {
+const MakeUp = () => {
   const dispatch = useDispatch();
 
   const [data , setData] = useState([])
 
  
-const [name, setName ] = useState("NEW ARRIVAL")
+const [name, setName ] = useState("Make Up")
 
   const product = useSelector((store) => store.AppReducer.productData);
   const [brand , setBrand] = useState("")
@@ -26,7 +26,7 @@ const [name, setName ] = useState("NEW ARRIVAL")
   // console.log("store",store)
   useEffect(()=>{
     
-      dispatch(getData("https://stark-lake-19402.herokuapp.com/newarrival"))
+      dispatch(getData("https://stark-lake-19402.herokuapp.com/makeup"))
     // setData(product)
   },[])
   useEffect(()=>{
@@ -124,7 +124,7 @@ const [name, setName ] = useState("NEW ARRIVAL")
                   fontWeight="400"
                   color="rgb(18,40,76)"
                 >
-                  New Arrival
+                  {name}
                 </Text>
               </Box>
               <Box
@@ -201,6 +201,7 @@ const [name, setName ] = useState("NEW ARRIVAL")
           </Box>
         </Box>
       </Box>
+
       <Box position='absolute' mt='1800px' w='100%'> 
           <Footer/>
       </Box>
@@ -208,4 +209,4 @@ const [name, setName ] = useState("NEW ARRIVAL")
   );
 };
 
-export default NewArrival;
+export default MakeUp;

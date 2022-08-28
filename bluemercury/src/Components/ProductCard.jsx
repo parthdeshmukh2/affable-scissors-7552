@@ -7,10 +7,12 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { Spinner } from '@chakra-ui/react'
+import useFetch from "../Hooks/useFetch";
 
 const ProductCard = (elem) => {
   const { Title } = elem;
   const [active, setActive] = useState(false);
+  const {isLoding} = useFetch('https://stark-lake-19402.herokuapp.com/newarrival')
  
 
  
@@ -37,10 +39,11 @@ const ProductCard = (elem) => {
   
   
   }
-  
+
 
   return (
- 
+    
+   
     
     <Box h="350px" boxShadow="xl" borderRadius="4">
       <Box

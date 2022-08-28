@@ -8,6 +8,7 @@ import SingleProduct from "./SingleProduct";
 import Wishlist from "../Pages/Wishlist";
 import Checkout from "../Pages/Checkout";
 import BagYaEmpty from "./BagYaEmpty";
+import MakeUp from "./MakeUp";
 
 const MainRoutes = () => {
   return (
@@ -20,6 +21,7 @@ const MainRoutes = () => {
       <Route path='/wishlist'  element={<Wishlist/>}  />
       <Route path='/checkout'  element={<Checkout/>}  />
       <Route path='/cart'  element={<BagYaEmpty/>}  />
+      <Route  path='/makeup' element={<MakeUp/>} />
     </Routes>
   );
 };
