@@ -18,14 +18,10 @@ const ProductReviews = ({ currprod }) => {
   return (
     <div>
       <Flex justifyContent="space-between" padding="10px">
-        <Text fontSize={"25px"} color={"hsl(217,14%,59%)"}>
-          Reviews
-        </Text>
-        <Text cursor={"pointer"} onClick={() => setShowrating(!showrating)}>
-          {showrating ? "-" : "+"}
-        </Text>
+        
+       
       </Flex>
-      {showrating && (
+      
         <Box>
           <Flex marginLeft={"15px"}>
             <Text fontSize={"25px"} fontWeight="bold">
@@ -34,8 +30,8 @@ const ProductReviews = ({ currprod }) => {
             <Text marginTop={"15px"}>out of 5 star</Text>
           </Flex>
 
-          <Flex marginTop={"20px"} border={"1px solid black"}>
-            <Box width={"40%"} marginLeft={"15px"} border={"1px solid red"}>
+          <Flex marginTop={"20px"} >
+            <Box width={"40%"} marginLeft={"15px"} >
               <Flex>crj37.08/22/18</Flex>
               <Flex>
                 <AiFillStar />
@@ -61,8 +57,8 @@ const ProductReviews = ({ currprod }) => {
               </Flex>
             </Box>
           </Flex>
-          <Flex marginTop={"20px"} border={"1px solid black"}>
-            <Box width={"40%"} marginLeft={"15px"} border={"1px solid red"}>
+          <Flex marginTop={"20px"} >
+            <Box width={"40%"} marginLeft={"15px"} >
               <Flex>leahf.08/22/19</Flex>
               <Flex>
                 <AiFillStar />
@@ -88,8 +84,8 @@ const ProductReviews = ({ currprod }) => {
               </Flex>
             </Box>
           </Flex>
-          <Flex marginTop={"20px"} border={"1px solid black"}>
-            <Box width={"40%"} marginLeft={"15px"} border={"1px solid red"}>
+          <Flex marginTop={"20px"} >
+            <Box width={"40%"} marginLeft={"15px"} >
               <Flex>drj78.12/22/20</Flex>
               <Flex>
                 <AiFillStar />
@@ -116,7 +112,7 @@ const ProductReviews = ({ currprod }) => {
             </Box>
           </Flex>
         </Box>
-      )}
+      
     </div>
   );
 };
