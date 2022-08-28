@@ -1,15 +1,21 @@
 import { Box, Button, Text } from '@chakra-ui/react'
+import { isDisabled } from '@testing-library/user-event/dist/utils'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import { deleteProductFail, deleteProductReq, deleteProductSuccess, getproductFailure, getproductRequest, getproductSuccess, UpdateProductFail, UpdateProductReq, UpdateProductSuccess } from '../Redux/BagReducer/action'
 import styles from "../Styles/Bag.module.css"
+import Footer from './Footer'
+import MainNavbar from './MainNavbar'
+
 
 
 
 const Bag = () => {
     const dispatch = useDispatch()
     const productdata = useSelector((store)=>store.BagReducer.products)
+    const navigate = useNavigate()
   
     const getProduct =()=>{
         dispatch(getproductRequest())
@@ -28,7 +34,7 @@ const Bag = () => {
     },[])
 
     const total = productdata.reduce(function(sum,el){
-        return sum+(Number(el.price)*Number(el.qty))
+        return sum+(Number(el.Price)*Number(el.Quantity))
        },0)
 
 
@@ -67,15 +73,21 @@ const Bag = () => {
         else
         {
     const payload={
-       qty:qty+amount
+        Quantity:qty+amount
     }
     console.log(payload);
     handleUpdate(id,payload)
     .then(()=>getProduct())
     }
 }
+
+
   return (
     <div>
+        <Box>
+        <MainNavbar/>
+        </Box>
+
      <Box className={styles.YourBagBoxakay}>
       
       <Text className={styles.YourBagtext} fontSize='3xl'>YOUR BAG</Text>
@@ -147,11 +159,15 @@ const Bag = () => {
 <Box className={styles.SubtotalBox}>
     <Box>
 <label className={styles.Subtotaledit}>Subtotal</label>
-<label className={styles.priceEedit}>₹{total}</label>
+<label className={styles.priceEedit}>$ {total}</label>
 </Box>
 <Text style={{fontSize:"14px" ,color:"gray"}}>Shipping, Taxes, Beauty Cards, and additional discounts applied at checkout</Text>
 
-<Button className={styles.bagBtnakay} bg="#12284c" color="white" borderRadius="none">CHECKOUT</Button>
+ <Button className={styles.bagBtnakay} bg="#12284c" color="white" borderRadius="none" onClick={()=>navigate("/checkout")}>CHECKOUT</Button>
+</Box>
+
+<Box>
+<Footer/>
 </Box>
     </div>
   )

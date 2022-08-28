@@ -1,11 +1,13 @@
 .InnerNavAkay{
     /* border: 1px solid black; */
-    width: 95%;
+    width: 100vw;
     margin: auto;
     display: flex;
     /* height: 100px; */
     justify-content: space-between;
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    position: fixed;
+    z-index: 99;
 }
 
 
