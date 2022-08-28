@@ -1,8 +1,8 @@
 import "./App.css";
-import Dumy from "./Pages/Dumy";
+import SideBar from "./Components/SideBar";
+
 import MainRoutes from "./Pages/MainRoutes";
 import NewArrival from "./Pages/NewArrival";
-import SingleProduct from "./Pages/SingleProduct";
 
 function App() {
   return (
@@ -10,8 +10,9 @@ function App() {
 
      <MainRoutes />
       
-    
-      
+    {/* <SideBar/> */}
+      {/* <NewArrival/> */}
+
     </div>
   )
 }

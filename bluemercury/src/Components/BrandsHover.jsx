@@ -4,6 +4,7 @@ import {
     Menu,
     MenuButton,
     MenuList,
+    Flex,
 } from "@chakra-ui/react"
 import styles from "../Styles/BrandsHover.module.css"
 
@@ -32,52 +33,52 @@ export default function BrandsHover() {
             <div className={styles.BrandBox}>
                
               <div className={styles.BrandFirstBox}>
-                <p style={{fontWeight:"500"}}>SHOPS ALL BRANDS</p>
+                <a href="/" style={{fontWeight:"500"}}>SHOPS ALL BRANDS</a>
               </div>
 
-              <div className={styles.BrandSecBox}>
-                <p style={{fontWeight:"500"}}>BEST SELLERS</p>
-                <p className={styles.BrandSecPara}>Augustinus Bader</p>
-                <p className={styles.BrandSecPara}>Chantecaille</p>
-                <p className={styles.BrandSecPara}>diptyque</p>
-                <p className={styles.BrandSecPara}>Dr. Barbara Sturm</p>
-                <p className={styles.BrandSecPara}>Dyson</p>
-                <p className={styles.BrandSecPara}>La Mer</p>
-                <p className={styles.BrandSecPara}>Lune + Aster</p>
-                <p className={styles.BrandSecPara}>M-61</p>
-                <p className={styles.BrandSecPara}>NARS</p>
-                <p className={styles.BrandSecPara}>Olaplex</p>
-                <p className={styles.BrandSecPara}>Oribe</p>
-                <p className={styles.BrandSecPara}>SkinCeuticals</p>
-                <p className={styles.BrandSecPara}>Supergoop!</p>
-                <p className={styles.BrandSecPara}>TOM FORD</p>
-                <p className={styles.BrandSecPara}>Trish McEvoy</p>
-                <p className={styles.BrandSecPara}>VIRTUE</p>
-              </div>
+              <Flex direction="column"  className={styles.BrandSecBox}>
+                <a href="/" style={{fontWeight:"500"}}>BEST SELLERS</a>
+                <a href="/" className={styles.BrandSecPara}>Augustinus Bader</a>
+                <a href="/" className={styles.BrandSecPara}>Chantecaille</a>
+                <a href="/" className={styles.BrandSecPara}>diptyque</a>
+                <a href="/" className={styles.BrandSecPara}>Dr. Barbara Sturm</a>
+                <a href="/" className={styles.BrandSecPara}>Dyson</a>
+                <a href="/" className={styles.BrandSecPara}>La Mer</a>
+                <a href="/" className={styles.BrandSecPara}>Lune + Aster</a>
+                <a href="/" className={styles.BrandSecPara}>M-61</a>
+                <a href="/" className={styles.BrandSecPara}>NARS</a>
+                <a href="/" className={styles.BrandSecPara}>Olaplex</a>
+                <a href="/" className={styles.BrandSecPara}>Oribe</a>
+                <a href="/"className={styles.BrandSecPara}>SkinCeuticals</a>
+                <a href="/" className={styles.BrandSecPara}>Supergoop!</a>
+                <a href="/" className={styles.BrandSecPara}>TOM FORD</a>
+                <a href="/" className={styles.BrandSecPara}>Trish McEvoy</a>
+                <a href="/" className={styles.BrandSecPara}>VIRTUE</a>
+              </Flex>
 
-              <div className={styles.BrandSecBox}>
-              <p style={{fontWeight:"500"}}>#NEWATBLUE</p>
-                <p className={styles.BrandSecPara}>BalmLabs</p>
-                <p className={styles.BrandSecPara}>Boucleme</p>
-                <p className={styles.BrandSecPara}>EltaMD</p>
-                <p className={styles.BrandSecPara}>Holy Curls</p>
-                <p className={styles.BrandSecPara}>L'AVANT</p>
-                <p className={styles.BrandSecPara}>Lake & Skye</p>
-                <p className={styles.BrandSecPara}>PCA Skin</p>
-                <p className={styles.BrandSecPara}>Sana Jardin</p>
-                <p className={styles.BrandSecPara}>Sisley-Paris</p>
-                <p className={styles.BrandSecPara}>Solawave</p>
-                <p className={styles.BrandSecPara}>Sunday || Sunday</p>
-                <p className={styles.BrandSecPara}>The Maker</p>
-                <p className={styles.BrandSecPara}>vVARDIS</p>
-                <p className={styles.BrandSecPara}>ZitSticka</p>
-              </div>
+              <Flex direction="column"  className={styles.BrandSecBox}>
+              <a href="/" style={{fontWeight:"500"}}>#NEWATBLUE</a>
+                <a href="/" className={styles.BrandSecPara}>BalmLabs</a>
+                <a href="/" className={styles.BrandSecPara}>Boucleme</a>
+                <a href="/" className={styles.BrandSecPara}>EltaMD</a>
+                <a href="/" className={styles.BrandSecPara}>Holy Curls</a>
+                <a href="/" className={styles.BrandSecPara}>L'AVANT</a>
+                <a href="/" className={styles.BrandSecPara}>Lake & Skye</a>
+                <a href="/" className={styles.BrandSecPara}>PCA Skin</a>
+                <a href="/" className={styles.BrandSecPara}>Sana Jardin</a>
+                <a href="/" className={styles.BrandSecPara}>Sisley-Paris</a>
+                <a href="/" className={styles.BrandSecPara}>Solawave</a>
+                <a href="/" className={styles.BrandSecPara}>Sunday || Sunday</a>
+                <a href="/" className={styles.BrandSecPara}>The Maker</a>
+                <a href="/" className={styles.BrandSecPara}>vVARDIS</a>
+                <a href="/" className={styles.BrandSecPara}>ZitSticka</a>
+              </Flex>
 
-              <div style={{textAlign:"left"}}>
+              <Flex direction="column"  style={{textAlign:"left"}}>
                 <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/elta_md_nav_303x303.jpg?v=1656446190" alt="" />
                 <p style={{fontWeight:"500"}}>New to Bluemercury: EltaMD</p>
                 <p style={{fontSize:"14px", color:"gray"}}>Snop the cult-favorite sunscreen brand!</p>
-              </div>
+              </Flex>
 
 
                </div>

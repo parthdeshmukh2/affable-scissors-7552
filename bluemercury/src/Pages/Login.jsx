@@ -1,12 +1,14 @@
-import { Box, Button, Input, Text } from "@chakra-ui/react";
+import { Box, Button, Input, Stack, Text } from "@chakra-ui/react";
 import React, {useState} from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Footer from "../Components/Footer";
 import MainNavbar from "../Components/MainNavbar";
 
 
 const Login = () => {
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
+    const navigate = useNavigate()
 
     const handleLogin = async () =>{
         if(email, pass){
@@ -31,22 +33,64 @@ const Login = () => {
         else{
             console.log("All Fields are required")
         }
-
+        navigate("/")
     }
-  return (
+    return (
+      <Stack w="100%">
+      <MainNavbar/>
     <Box>
+<Box
+        h="35px"
+        bg="rgb(215,235,242)"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        border="none"
+        mt={{lg:'32'}}
+        textAlign="center"
+        // color={"rgb(96,111,135)"}
+        color={"black"}
+        fontSize="0.3rem" letterSpacing={"1px"}
+      >
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+    <Text
+          fontFamily="Montserrat Medium,sans-serif"
+          fontSize="10px"
+          color="gray"
+          fontWeight="500"
+          letterSpacing="-10%"
+        >FREE SHIPPING FOR BLUEREWARDS MEMBER</Text> 
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+    <Text
+          fontFamily="Montserrat Medium,sans-serif"
+          fontSize="10px"
+          color="gray"
+          fontWeight="500"
+          letterSpacing="-10%"
+        > FREE GIFTS WITH PURCHASE. BROWSE NOW  </Text> 
+    </div>
+    <div class="carousel-item">
+    <Text
+          fontFamily="Montserrat Medium,sans-serif"
+          fontSize="10px"
+          color="gray"
+          fontWeight="500"
+          letterSpacing="-10%"
+        > FREE SAMPLES WITH ALL ORDERS</Text>
+    </div>
+  </div>
+</div>
+      </Box>
 
-<MainNavbar/>
 
    
     <Box
       w={{ base: "90%", sm: "90%", lg: "35%" }}
- 
-      
 position='absolute'
-   
-    ml={{base:"5%", sm:"5%", lg:"32.5%"}}
-     mt="44"
+    ml={{base:"5%", sm:"5%", lg:"32.5%"}}  mt="10"
     
       display="flex"
       flexDirection="column"
@@ -127,7 +171,11 @@ position='absolute'
         </Link>
       </Box>
     </Box>
+    <Box position='absolute' mt='550px' w='100%'>
+      <Footer/>
     </Box>
+    </Box>
+    </Stack>
   );
 };
 

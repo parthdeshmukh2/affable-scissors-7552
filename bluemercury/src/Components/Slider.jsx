@@ -26,9 +26,10 @@ export const Slider= (dataArr)=>{
 navigate(`/product/${id}`)
  }
   return (
-    <Box m='auto' mt='8'  w='80%' >
+    <Box m='auto' mt='8' w='80%' >
      
       <Swiper
+      color="black"
         // slidesPerView={3}
         spaceBetween={30}
         // slidesPerGroup={3}
@@ -65,7 +66,9 @@ navigate(`/product/${id}`)
       return (
         
         <SwiperSlide key={elem._id} onClick={(id)=>handleClick(id)}>
-          <Box display='flex' flexDirection='column' boxShadow='2xl' p='4' h='350px' mb='8' borderRadius='xl' cursor='pointer'>
+          <Box display='flex' flexDirection='column' 
+          /* boxShadow='2xl' */
+          p='4' h='350px' mb='8' borderRadius='xl' cursor='pointer'>
             <Box h='70%'>
             <Image  src={elem.Image} />
             </Box>
