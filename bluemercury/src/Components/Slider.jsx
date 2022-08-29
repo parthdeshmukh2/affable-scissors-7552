@@ -65,7 +65,8 @@ navigate(`/product/${id}`)
     {data.map((elem)=> {
       return (
         
-        <SwiperSlide key={elem._id} onClick={(id)=>handleClick(id)}>
+        <SwiperSlide key={elem._id} onClick={()=>handleClick(elem._id)}>
+          
           <Box display='flex' flexDirection='column' 
           /* boxShadow='2xl' */
           p='4' h='350px' mb='8' borderRadius='xl' cursor='pointer'>
