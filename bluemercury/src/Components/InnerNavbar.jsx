@@ -37,27 +37,27 @@ const InnerNavbar = () => {
       NEW!
     </MenuItem>
     </Link>
-    <MenuItem>
+    <Link to="/newarrival"> <MenuItem>
       BRANDS
     </MenuItem>
-    <MenuItem>
+    <Link to="/newarrival"> <MenuItem>
       EXPLORE
-    </MenuItem>
-    <MenuItem>
+    </MenuItem> </Link>
+    <Link to="/newarrival"> <MenuItem>
       EVENTS
-    </MenuItem>
-    <MenuItem>
+    </MenuItem> </Link>
+    <Link to="/newarrival"></Link><MenuItem>
       BLUEREWARDS
-    </MenuItem>
-    <MenuItem>
+    </MenuItem> </Link>
+    <Link to="/newarrival"> <MenuItem>
       ROUTINE REBOOT
-    </MenuItem>
+    </MenuItem> </Link>
   </MenuList>
 </Menu>
           </Box>
 
           <Box w="50%" h="100%" display="flex" justifyContent="center" >
-            <Image src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182" alt="" w={{base:"80%", md:"60%"}} h={{base:"80%", md:"80%"}}/>
+          <Link to="/"> <Image src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182" alt="" w={{base:"80%", md:"60%"}} h={{base:"80%", md:"80%"}}/></Link>
           </Box>
 
           <Box display="flex" justifyContent="space-between"  w="30%">
@@ -68,10 +68,10 @@ const InnerNavbar = () => {
             <BsSearch size={20} color="black"/>
             </Box>
             <Box>
-            <CgProfile size={20} color="black"/>
+           <Link to="/login"> <CgProfile size={20} color="black"/></Link>
             </Box>
             <Box>
-            <BsHandbag size={20} color="black"/>
+            <Link to="/cart"> <BsHandbag size={20} color="black"/></Link>
             </Box>
           </Box>
 
