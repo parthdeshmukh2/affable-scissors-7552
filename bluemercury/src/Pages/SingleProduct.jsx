@@ -58,6 +58,7 @@ const SingleProduct = () => {
       })
       .then((res) => {
         console.log(res.data);
+        alert("Item has successfully added to cart")
       })
       .catch((err) => console.log(err));
   };
@@ -91,8 +92,40 @@ const SingleProduct = () => {
     setActive(!active);
   };
 
+
+   const addtowish = (currprod) => {
+    const { _id, Price, Image, Title } = currprod;
+    axios
+      .post(`https://stark-lake-19402.herokuapp.com/wishlist/create`, { id: _id, Price, Image, Title })
+      .then((res) => {
+        console.log(res.data);
+        alert("Item successfully added to wishlist")
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+      setActive(!active);
+  };
+  
+  
+ const removetowish = (currprod) => {
+    const { _id } = currprod;
+    axios
+      .delete(`https://stark-lake-19402.herokuapp.com/wishlist/${_id}/delete`)
+      .then((res) => {
+        console.log(res.data);
+        alert("Item successfully removed from wishlist")
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+      setActive(!active);
+  };
+  
+
   return (
     <>
+    <button onClick={()=>removetowish(currprod)}>add to wishlist</button>
       <Box>
         <Box>
           <MainNavbar />
@@ -285,12 +318,12 @@ const SingleProduct = () => {
                   display="flex"
                   alignItems="center"
                   cursor="pointer"
-                  onClick={() => handleWishListItem(currprod)}
+                  //onClick={() => handleWishListItem(currprod)}
                 >
                   {active ? (
-                    <AiFillHeart style={{ width: "50%", height: "50%" }} />
+                    <AiFillHeart onClick={()=>removetowish(currprod)} style={{ width: "50%", height: "50%" }} />
                   ) : (
-                    <RiHeartAddLine style={{ width: "50%", height: "50%" }} />
+                    <RiHeartAddLine onClick={()=>addtowish(currprod)} style={{ width: "50%", height: "50%" }} />
                   )}
                 </Box>
               </Box>
@@ -394,7 +427,7 @@ const SingleProduct = () => {
         </Box>
       </Box>
       
-      <Box position="absolute" mt="1500px" w="100%">
+      <Box position="absolute" mt="1650px" w="100%">
         <Footer />
       </Box>
     </>
