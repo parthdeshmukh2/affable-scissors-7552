@@ -27,13 +27,14 @@ const Login = () => {
                 localStorage.setItem("token", res.token)
             }
                 )
-            .catch((err)=> console.log(err));
+            .then((err)=> console.log(err));
             alert("Login SuccessFull")
+            navigate("/")
         }
         else{
             console.log("All Fields are required")
+            alert("WRONG INPUT")
         }
-        navigate("/")
     }
     return (
       <Stack w="100%">
