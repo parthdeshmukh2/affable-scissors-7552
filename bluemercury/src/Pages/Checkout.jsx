@@ -205,7 +205,7 @@ Total	USD $118.00*/}
 
        
 
-          <Flex
+          {/* <Flex
             w="100%"
             justifyContent={"space-between"}
             m="20px auto 10px auto"
@@ -217,9 +217,9 @@ Total	USD $118.00*/}
             <Text fontSize={"16px"}>
               USD <b> $118.00</b>
             </Text>
-          </Flex>
+          </Flex> */}
           <RLink to="/payments">
-            <Button
+            {/* <Button
               bg="rgb(18,40,76)"
               color={"white"}
               letterSpacing="0.5px"
@@ -228,7 +228,7 @@ Total	USD $118.00*/}
               p="10px 30px"
             >
               CONTINUE PAYMENT
-            </Button>
+            </Button> */}
           </RLink>
 
         </Box>
