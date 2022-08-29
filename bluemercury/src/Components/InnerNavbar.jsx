@@ -62,7 +62,7 @@ const InnerNavbar = () => {
 
           <Box display="flex" justifyContent="space-between"  w="30%">
             <Box>
-            <BsSuitHeart size={20} color="black"/>
+            <Link to="/wishlist"> <BsSuitHeart size={20} color="black"/></Link>
             </Box>
             <Box>
             <BsSearch size={20} color="black"/>
