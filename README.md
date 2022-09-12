@@ -1,7 +1,9 @@
-# bluemercury
+# Bluemercury
 Bluemercury is a chain of American beauty stores founded in 1999 by Marla Malcolm Beck and Barry Beck in Georgetown, Washington, D.C. The stores sell cosmetics, as well as in-store facials and spa treatments. In addition to selling products from other brands, the company developed its own M-61 skincare line in 2012 and Lune+Aster make-up line in 2015.
 
 Deploy Ment link --- https://affable-scissors-7552.vercel.app/
+
+
 Backend Heroku Deployment --- 
 
 Tech Stack used: • React.js • Redux • Javascript • Node.js  •Express• MongoDB • CSS • Chakra UI • Rapid Api 
