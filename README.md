@@ -6,7 +6,7 @@ Deploy Ment link --- https://affable-scissors-7552.vercel.app/
 
 Backend Heroku Deployment --- 
 
-Tech Stack used: • React.js • Redux • Javascript • Node.js  •Express• MongoDB • CSS • Chakra UI • Rapid Api 
+Tech Stack used: • React.js • Redux • Javascript • Node.js  •Express• MongoDB • CSS • Chakra UI 
 
 
 Pages Build : • Landing Page
