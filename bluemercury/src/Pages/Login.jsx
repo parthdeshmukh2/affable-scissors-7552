@@ -3,12 +3,21 @@ import React, {useState} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "../Components/Footer";
 import MainNavbar from "../Components/MainNavbar";
+import {useDispatch, useSelector} from "react-redux";
+import { useLocation } from "react-router-dom";
+// import { userLogin } from "../Redux/AuthReducer/action";
 
 
 const Login = () => {
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
-    const navigate = useNavigate()
+//     const location= useLocation();
+
+// const lastLocation = location.state?.from?.pathname || '/';
+  
+    const navigate = useNavigate();
+    const dispatch =  useDispatch();
+    // const isAuth = useSelector((store)=> store.AuthReducer.isAuth );
 
     const handleLogin = async () =>{
         if(email, pass){
@@ -36,6 +45,25 @@ const Login = () => {
             alert("WRONG INPUT")
         }
     }
+   
+    // const handleLogin = ()=> {
+    //  if(email && pass){
+    //    const payload ={
+    //      Email:email, 
+    //      Password:pass
+    //    }
+    //    dispatch(userLogin(payload))
+    //    .then((res)=> {
+    //     alert("Login Success")
+    //   navigate('/')
+         
+    // })
+      
+    //  }
+       
+    // }
+    // console.log(isAuth);
+
     return (
       <Stack w="100%">
       <MainNavbar/>
