@@ -13,9 +13,9 @@ import Footer from '../Components/Footer';
 
 
 const HomePage = () => {
-  const newArrival = useFetch("https://stark-lake-19402.herokuapp.com/newarrival");
-  const makeUp = useFetch("https://stark-lake-19402.herokuapp.com/makeup");
-  const bestSellers = useFetch("https://stark-lake-19402.herokuapp.com/bestsellers");
+  const newArrival = useFetch("https://thawing-wildwood-83730.herokuapp.com/newarrival");
+  const makeUp = useFetch("https://thawing-wildwood-83730.herokuapp.com/makeup");
+  const bestSellers = useFetch("https://thawing-wildwood-83730.herokuapp.com/bestsellers");
 
   return (
     <Box fontFamily={"Montserrat Light,sans-serif"}>

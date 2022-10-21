@@ -8,32 +8,26 @@ import { useEffect } from "react";
 
 const My_Wishlist = () => {
 
-  const wishListItem = useFetch(
-    "https://stark-lake-19402.herokuapp.com/wishlist"
-  );
-  console.log(wishListItem.data);
-  const [active, setActive] = useState(true);
- const [wishlistData,setWishlistData]=useState(wishListItem)
- console.log(wishlistData)
+const wishListItem = useFetch("https://thawing-wildwood-83730.herokuapp.com/wishlist");
+console.log(wishListItem.data);
+const [active, setActive] = useState(true);
 
- useEffect(()=>{
-  getwish()
- },[])
+const handleAddToCart = (payload) => {
+  payload = {...payload, Quantity:1}
+  
+ const token = localStorage.getItem("token");
+ axios
+     .post("https://thawing-wildwood-83730.herokuapp.com/cart/create", payload, {
+         headers: {
+             token: "Bearer " + token,
+             "Content-Type": "application/json",
+         },
+     })
+     .then((res) => {
+         console.log(res.data)
+         alert("Item Added To Cart");
 
-  const handleAddToCart = (payload) => {
-    payload = { ...payload, Quantity: 1 };
 
-    const token = localStorage.getItem("token");
-    axios
-      .post("https://stark-lake-19402.herokuapp.com/cart/create", payload, {
-        headers: {
-          token: "Bearer " + token,
-          "Content-Type": "application/json",
-        },
-      })
-      .then((res) => {
-        console.log(res.data);
-        alert("Item Added To Cart");
         //  handleRemoveWishListItem()
       })
       .catch((err) => console.log(err));
@@ -50,10 +44,17 @@ const My_Wishlist = () => {
   //   .catch((err)=> console.log(err));
   // }
 
+
+// const handleRemoveWishListItem=(id)=>{
+//   axios.delete(`https://thawing-wildwood-83730.herokuapp.com/wishlist/delete/${id}`)
+//   .the((res)=> {
+//     console.log("deleted")
+//   alert("Item Removed from the Wishlist")
+
   const removetowish = (currprod) => {
     const { _id } = currprod;
     axios
-      .delete(`https://stark-lake-19402.herokuapp.com/wishlist/${_id}/delete`)
+      .delete(`https://thawing-wildwood-83730.herokuapp.com/wishlist/${_id}/delete`)
       .then((res) => {
         console.log(res.data);
         alert("Item successfully removed from wishlist")

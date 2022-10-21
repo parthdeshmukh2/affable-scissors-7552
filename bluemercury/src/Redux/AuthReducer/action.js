@@ -6,7 +6,7 @@ export const userLogin = (payload) => (dispatch)=>{
     console.log(payload)
     dispatch({type:types.GET_LOGIN_REQUEST})
 
-    axios.post("https://stark-lake-19402.herokuapp.com/user/login", payload)
+    axios.post("https://thawing-wildwood-83730.herokuapp.com/user/login", payload)
     .then((res)=>{
         dispatch({type:types.GET_LOGIN_SUCCESS, payload:res.data.token})
         console.log("Login Success")

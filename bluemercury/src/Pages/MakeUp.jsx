@@ -26,7 +26,7 @@ const [name, setName ] = useState("Make Up")
   // console.log("store",store)
   useEffect(()=>{
     
-      dispatch(getData("https://stark-lake-19402.herokuapp.com/makeup"))
+      dispatch(getData("https://thawing-wildwood-83730.herokuapp.com/makeup"))
     // setData(product)
   },[])
   useEffect(()=>{
