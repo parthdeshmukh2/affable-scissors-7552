@@ -9,7 +9,7 @@ import axios from "axios";
 
 const My_Wishlist = () => {
 
-const wishListItem = useFetch("https://stark-lake-19402.herokuapp.com/wishlist");
+const wishListItem = useFetch("https://thawing-wildwood-83730.herokuapp.com/wishlist");
 console.log(wishListItem.data);
 const [active, setActive] = useState(true);
 
@@ -18,7 +18,7 @@ const handleAddToCart = (payload) => {
   
  const token = localStorage.getItem("token");
  axios
-     .post("https://stark-lake-19402.herokuapp.com/cart/create", payload, {
+     .post("https://thawing-wildwood-83730.herokuapp.com/cart/create", payload, {
          headers: {
              token: "Bearer " + token,
              "Content-Type": "application/json",
@@ -35,7 +35,7 @@ const handleAddToCart = (payload) => {
 }
 
 // const handleRemoveWishListItem=(id)=>{
-//   axios.delete(`https://stark-lake-19402.herokuapp.com/wishlist/delete/${id}`)
+//   axios.delete(`https://thawing-wildwood-83730.herokuapp.com/wishlist/delete/${id}`)
 //   .the((res)=> {
 //     console.log("deleted")
 //   alert("Item Removed from the Wishlist")

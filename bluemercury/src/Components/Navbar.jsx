@@ -28,7 +28,7 @@ const Navbar = () => {
 const btnRef = React.useRef()
 
 const navigate = useNavigate();
-const cartData = useFetch('https://stark-lake-19402.herokuapp.com/cart');
+const cartData = useFetch('https://thawing-wildwood-83730.herokuapp.com/cart');
 console.log(cartData.data, "cartData");
 
 const goToCart = () => {

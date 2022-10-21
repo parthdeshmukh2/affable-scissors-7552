@@ -23,7 +23,7 @@ const handleSignUp = async () => {
             FirstName:firstName,
             LastName:lastName
         }
-        await fetch("https://stark-lake-19402.herokuapp.com/user/signup", {
+        await fetch("https://thawing-wildwood-83730.herokuapp.com/user/signup", {
             method:"POST",
             body: JSON.stringify(payload), 
             headers:{"Content-Type":"application/json"}

@@ -23,7 +23,7 @@ export const Slider= (dataArr)=>{
   const navigate = useNavigate();
   
  const handleClick = (id)=>{
-navigate(`/product/${id}`)
+// navigate(`/product/${id}`)
  }
   return (
     <Box m='auto' mt='8' w='80%' >

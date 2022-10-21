@@ -50,7 +50,7 @@ const SingleProduct = () => {
 
     const token = localStorage.getItem("token");
     axios
-      .post("https://stark-lake-19402.herokuapp.com/cart/create", payload, {
+      .post("https://thawing-wildwood-83730.herokuapp.com/cart/create", payload, {
         headers: {
           token: "Bearer " + token,
           "Content-Type": "application/json",
@@ -78,7 +78,7 @@ const SingleProduct = () => {
   const handleWishListItem = (payload) => {
     const token = localStorage.getItem("token");
     axios
-      .post("https://stark-lake-19402.herokuapp.com/wishlist/create", payload, {
+      .post("https://thawing-wildwood-83730.herokuapp.com/wishlist/create", payload, {
         headers: {
           token: "Bearer " + token,
           "Content-Type": "application/json",
