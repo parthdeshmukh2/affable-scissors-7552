@@ -34,9 +34,9 @@ import { useEffect } from "react";
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
+  const navigate = useNavigate();
+  const cartDatas = useFetch("https://thawing-wildwood-83730.herokuapp.com/cart");
 
-
-const navigate = useNavigate();
 const cartData = useFetch('https://thawing-wildwood-83730.herokuapp.com/cart');
 console.log(cartData.data, "cartData");
 
@@ -45,7 +45,7 @@ console.log(cartData.data, "cartData");
 
   const [cartdata, setCartdata] = useState(cartDatas);
   console.log(cartdata,"cartdata")
-  const navigate = useNavigate();
+
 
   console.log(cartDatas.data, "cartData");
 
@@ -58,7 +58,7 @@ console.log(cartData.data, "cartData");
 
   const handleDelete = (id) => {
     return axios
-      .delete(`https://stark-lake-19402.herokuapp.com/cart/${id}/delete`)
+      .delete(`https://thawing-wildwood-83730.herokuapp.com/cart/${id}/delete`)
       .then((r) =>{ console.log(r.data);
       alert("Item successfully removed from cart")
       }
@@ -72,7 +72,7 @@ console.log(cartData.data, "cartData");
 
   const getProduct = () => {
     return axios
-      .get("https://stark-lake-19402.herokuapp.com/cart")
+      .get("https://thawing-wildwood-83730.herokuapp.com/cart")
       .then((r) => {
         console.log(r.data);
         setCartdata(r);

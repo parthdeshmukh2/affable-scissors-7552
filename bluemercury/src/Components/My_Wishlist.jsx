@@ -7,7 +7,7 @@ import axios from "axios";
 import { useEffect } from "react";
 
 const My_Wishlist = () => {
-
+  const [wishlistData,setWishlistData]=useState(wishListItem)
 const wishListItem = useFetch("https://thawing-wildwood-83730.herokuapp.com/wishlist");
 console.log(wishListItem.data);
 const [active, setActive] = useState(true);
@@ -34,7 +34,7 @@ const handleAddToCart = (payload) => {
   };
 
   // const handleRemoveWishListItem=(id)=>{
-  //   axios.delete(`https://stark-lake-19402.herokuapp.com/wishlist/delete/${id}`)
+  //   axios.delete(`https://thawing-wildwood-83730.herokuapp.com/wishlist/delete/${id}`)
   //   .the((res)=> {
   //     console.log("deleted")
   //   alert("Item Removed from the Wishlist")
@@ -69,7 +69,7 @@ const handleAddToCart = (payload) => {
   const getwish = () => {
     
     axios
-      .get(`https://stark-lake-19402.herokuapp.com/wishlist`)
+      .get(`https://thawing-wildwood-83730.herokuapp.com/wishlist`)
       .then((res) => {
         console.log(res.data);
         setWishlistData(res)
