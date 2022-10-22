@@ -7,9 +7,10 @@ import axios from "axios";
 import { useEffect } from "react";
 
 const My_Wishlist = () => {
-  const [wishlistData,setWishlistData]=useState(wishListItem)
+
 const wishListItem = useFetch("https://thawing-wildwood-83730.herokuapp.com/wishlist");
-console.log(wishListItem.data);
+const [wishlistData,setWishlistData]=useState(wishListItem.data)
+console.log(wishListItem.data, "divh");
 const [active, setActive] = useState(true);
 
 const handleAddToCart = (payload) => {
@@ -58,7 +59,7 @@ const handleAddToCart = (payload) => {
       .then((res) => {
         console.log(res.data);
         alert("Item successfully removed from wishlist")
-        getwish()
+        // getwish()
       })
       .catch((err) => {
         console.log(err);
@@ -93,7 +94,7 @@ const handleAddToCart = (payload) => {
       m="auto"
       gap="4"
     >
-      {wishlistData && wishlistData.data.map((elem) => {
+      {wishListItem.length>0 && wishListItem.map((elem) => {
         return (
           <Box h="370px" boxShadow="xl" borderRadius="4">
             <Box
