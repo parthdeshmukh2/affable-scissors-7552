@@ -25,7 +25,7 @@ const Login = () => {
                Email: email,
                  Password: pass
             }
-            await fetch("https://thawing-wildwood-83730.herokuapp.com/user/login", {
+            await fetch("https://bluemercury-backend.vercel.app/user/login", {
                 method:"POST",
                 body: JSON.stringify(payload), 
                 headers:{"Content-Type":"application/json"}
