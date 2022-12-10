@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 const My_Wishlist = () => {
 
-const wishListItem = useFetch("https://thawing-wildwood-83730.herokuapp.com/wishlist");
+const wishListItem = useFetch("https://bluemercury-backend.vercel.app/wishlist");
 const [wishlistData,setWishlistData]=useState(wishListItem.data)
 console.log(wishListItem.data, "divh");
 const [active, setActive] = useState(true);
@@ -18,7 +18,7 @@ const handleAddToCart = (payload) => {
   
  const token = localStorage.getItem("token");
  axios
-     .post("https://thawing-wildwood-83730.herokuapp.com/cart/create", payload, {
+     .post("https://bluemercury-backend.vercel.app/cart/create", payload, {
          headers: {
              token: "Bearer " + token,
              "Content-Type": "application/json",
@@ -35,7 +35,7 @@ const handleAddToCart = (payload) => {
   };
 
   // const handleRemoveWishListItem=(id)=>{
-  //   axios.delete(`https://thawing-wildwood-83730.herokuapp.com/wishlist/delete/${id}`)
+  //   axios.delete(`https://bluemercury-backend.vercel.app/wishlist/delete/${id}`)
   //   .the((res)=> {
   //     console.log("deleted")
   //   alert("Item Removed from the Wishlist")
@@ -47,7 +47,7 @@ const handleAddToCart = (payload) => {
 
 
 // const handleRemoveWishListItem=(id)=>{
-//   axios.delete(`https://thawing-wildwood-83730.herokuapp.com/wishlist/delete/${id}`)
+//   axios.delete(`https://bluemercury-backend.vercel.app/wishlist/delete/${id}`)
 //   .the((res)=> {
 //     console.log("deleted")
 //   alert("Item Removed from the Wishlist")
@@ -55,7 +55,7 @@ const handleAddToCart = (payload) => {
   const removetowish = (currprod) => {
     const { _id } = currprod;
     axios
-      .delete(`https://thawing-wildwood-83730.herokuapp.com/wishlist/${_id}/delete`)
+      .delete(`https://bluemercury-backend.vercel.app/wishlist/${_id}/delete`)
       .then((res) => {
         console.log(res.data);
         alert("Item successfully removed from wishlist")
@@ -70,7 +70,7 @@ const handleAddToCart = (payload) => {
   const getwish = () => {
     
     axios
-      .get(`https://thawing-wildwood-83730.herokuapp.com/wishlist`)
+      .get(`https://bluemercury-backend.vercel.app/wishlist`)
       .then((res) => {
         console.log(res.data);
         setWishlistData(res)

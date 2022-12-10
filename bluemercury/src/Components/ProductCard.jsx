@@ -12,7 +12,7 @@ import useFetch from "../Hooks/useFetch";
 const ProductCard = (elem) => {
   const { Title } = elem;
   const [active, setActive] = useState(false);
-  const {isLoding} = useFetch('https://thawing-wildwood-83730.herokuapp.com/newarrival')
+  const {isLoding} = useFetch('https://bluemercury-backend.vercel.app/newarrival')
  
 
  
@@ -24,7 +24,7 @@ const ProductCard = (elem) => {
     
    const token = localStorage.getItem("token");
    axios
-       .post("https://thawing-wildwood-83730.herokuapp.com/wishlist/create", payload, {
+       .post("https://bluemercury-backend.vercel.app/wishlist/create", payload, {
            headers: {
                token: "Bearer " + token,
                "Content-Type": "application/json",

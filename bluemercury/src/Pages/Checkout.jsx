@@ -7,7 +7,7 @@ import { Link as RLink } from "react-router-dom";
 
 const Checkout = () => {
   const [code , setCode] = useState("")
-  const cartItem = useFetch("https://thawing-wildwood-83730.herokuapp.com/cart")
+  const cartItem = useFetch("https://bluemercury-backend.vercel.app/cart")
   const productdata = cartItem.data
   console.log(cartItem.data)
 

@@ -13,9 +13,9 @@ import Footer from '../Components/Footer';
 
 
 const HomePage = () => {
-  const newArrival = useFetch("https://thawing-wildwood-83730.herokuapp.com/newarrival");
-  const makeUp = useFetch("https://thawing-wildwood-83730.herokuapp.com/makeup");
-  const bestSellers = useFetch("https://thawing-wildwood-83730.herokuapp.com/bestsellers");
+  const newArrival = useFetch("https://bluemercury-backend.vercel.app/newarrival");
+  const makeUp = useFetch("https://bluemercury-backend.vercel.app/makeup");
+  const bestSellers = useFetch("https://bluemercury-backend.vercel.app/bestsellers");
 
   return (
     <Box fontFamily={"Montserrat Light,sans-serif"}>

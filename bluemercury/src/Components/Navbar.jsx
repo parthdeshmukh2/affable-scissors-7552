@@ -35,9 +35,9 @@ const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const navigate = useNavigate();
-  const cartDatas = useFetch("https://thawing-wildwood-83730.herokuapp.com/cart");
+  const cartDatas = useFetch("https://bluemercury-backend.vercel.app/cart");
 
-const cartData = useFetch('https://thawing-wildwood-83730.herokuapp.com/cart');
+const cartData = useFetch('https://bluemercury-backend.vercel.app/cart');
 // console.log(cartData.data, "cartData");
 
 
@@ -58,7 +58,7 @@ const cartData = useFetch('https://thawing-wildwood-83730.herokuapp.com/cart');
 
   const handleDelete = (id) => {
     return axios
-      .delete(`https://thawing-wildwood-83730.herokuapp.com/cart/${id}/delete`)
+      .delete(`https://bluemercury-backend.vercel.app/cart/${id}/delete`)
       .then((r) =>{ console.log(r.data);
       alert("Item successfully removed from cart")
       }
@@ -72,7 +72,7 @@ const cartData = useFetch('https://thawing-wildwood-83730.herokuapp.com/cart');
 
   const getProduct = () => {
     return axios
-      .get("https://thawing-wildwood-83730.herokuapp.com/cart")
+      .get("https://bluemercury-backend.vercel.app/cart")
       .then((r) => {
         console.log(r.data);
         setCartdata(r);

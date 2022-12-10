@@ -50,7 +50,7 @@ const SingleProduct = () => {
 
     const token = localStorage.getItem("token");
     axios
-      .post("https://thawing-wildwood-83730.herokuapp.com/cart/create", payload, {
+      .post("https://bluemercury-backend.vercel.app/cart/create", payload, {
         headers: {
           token: "Bearer " + token,
           "Content-Type": "application/json",
@@ -79,7 +79,7 @@ const SingleProduct = () => {
   const handleWishListItem = (payload) => {
     const token = localStorage.getItem("token");
     axios
-      .post("https://thawing-wildwood-83730.herokuapp.com/wishlist/create", payload, {
+      .post("https://bluemercury-backend.vercel.app/wishlist/create", payload, {
         headers: {
           token: "Bearer " + token,
           "Content-Type": "application/json",
@@ -96,7 +96,7 @@ const SingleProduct = () => {
    const addtowish = (currprod) => {
     const { _id, Price, Image, Title } = currprod;
     axios
-      .post(`https://thawing-wildwood-83730.herokuapp.com/wishlist/create`, { id: _id, Price, Image, Title })
+      .post(`https://bluemercury-backend.vercel.app/wishlist/create`, { id: _id, Price, Image, Title })
       .then((res) => {
         console.log(res.data);
         alert("Item successfully added to wishlist")
@@ -111,7 +111,7 @@ const SingleProduct = () => {
  const removetowish = (currprod) => {
     const { _id } = currprod;
     axios
-      .delete(`https://thawing-wildwood-83730.herokuapp.com/wishlist/${_id}/delete`)
+      .delete(`https://bluemercury-backend.vercel.app/wishlist/${_id}/delete`)
       .then((res) => {
         console.log(res.data);
         alert("Item successfully removed from wishlist")

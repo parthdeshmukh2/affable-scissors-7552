@@ -19,7 +19,7 @@ const Bag = () => {
   
     const getProduct =()=>{
         dispatch(getproductRequest())
-        return axios.get("https://thawing-wildwood-83730.herokuapp.com/cart")
+        return axios.get("https://bluemercury-backend.vercel.app/cart")
         .then((r)=>{
             dispatch(getproductSuccess(r.data))
             console.log(r.data);
@@ -41,7 +41,7 @@ const Bag = () => {
 
    const handleDelete=(id)=>{
        dispatch(deleteProductReq())
-        return axios.delete(`https://thawing-wildwood-83730.herokuapp.com/cart/${id}/delete`)
+        return axios.delete(`https://bluemercury-backend.vercel.app/cart/${id}/delete`)
         .then((r)=>dispatch(deleteProductSuccess()))
         .catch((e)=>dispatch(deleteProductFail()))
     }
@@ -53,7 +53,7 @@ const Bag = () => {
 
     const handleUpdate=(id,payload)=>{
         dispatch(UpdateProductReq())
-        return axios.patch(`https://thawing-wildwood-83730.herokuapp.com/cart/${id}/edit`,payload)
+        return axios.patch(`https://bluemercury-backend.vercel.app/cart/${id}/edit`,payload)
         .then((r)=>{
             dispatch(UpdateProductSuccess())
         })
