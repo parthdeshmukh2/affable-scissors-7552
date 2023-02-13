@@ -1,50 +1,66 @@
 import { Box, Image, Text } from "@chakra-ui/react";
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { RiHeartAddLine } from "react-icons/ri";
 import { AiFillHeart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useSelector } from "react-redux";
-import { Spinner } from '@chakra-ui/react'
+import { Spinner } from "@chakra-ui/react";
 import useFetch from "../Hooks/useFetch";
 
 const ProductCard = (elem) => {
   const { Title } = elem;
   const [active, setActive] = useState(false);
-  const {isLoding} = useFetch('https://bluemercury-backend.vercel.app/newarrival')
- 
+  const { isLoding } = useFetch(
+    "https://bluemercury-backend.vercel.app/newarrival"
+  );
 
- 
   // console.log(Iamges[0]);
 
   const handleAddToWishList = (payload) => {
-    payload = {...payload, Quantity:1}
-    setActive(true);
-    
-   const token = localStorage.getItem("token");
-   axios
-       .post("https://bluemercury-backend.vercel.app/wishlist/create", payload, {
-           headers: {
-               token: "Bearer " + token,
-               "Content-Type": "application/json",
-           },
-       })
-       .then((res) => {
-           console.log(res.data, "added")
-           alert("Item Added To WishList")
-        
-       })
-       .catch((err) => console.log(err));
-  
-  
-  }
+    let { _id } = payload;
+    //console.log(payload, _id, "payload");
+    payload = { ...payload, Quantity: 1 };
 
+    const token = localStorage.getItem("token");
+
+    if (active) {
+      //console.log(payload, _id, "payload");
+      axios
+        .delete(`https://bluemercury-backend.vercel.app/wishlist/${_id}/delete`)
+        .then((res) => {
+          //console.log(res.data,"res data");
+          alert("Item successfully removed from wishlist");
+          // getwish();
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      setActive(false);
+    } else {
+      axios
+        .post(
+          "https://bluemercury-backend.vercel.app/wishlist/create",
+          payload,
+          {
+            headers: {
+              token: "Bearer " + token,
+              "Content-Type": "application/json",
+            },
+          }
+        )
+        .then((res) => {
+          // console.log(res.data, "added");
+          alert("Item Added To WishList");
+        })
+        .catch((err) => console.log(err));
+
+      setActive(true);
+    }
+  };
 
   return (
-    
-   
-    
     <Box h="350px" boxShadow="xl" borderRadius="4">
       <Box
         display="flex"
@@ -55,11 +71,16 @@ const ProductCard = (elem) => {
         <Text color="gray" fontWeight="500" fontSize="sm">
           New
         </Text>
-        <Box h="100%" w="20%" cursor="pointer" onClick={()=>handleAddToWishList(elem)}>
+        <Box
+          h="100%"
+          w="20%"
+          cursor="pointer"
+          onClick={() => handleAddToWishList(elem)}
+        >
           {active ? (
             <AiFillHeart style={{ width: "80%", height: "80%" }} />
           ) : (
-            <RiHeartAddLine style={{ width: "80%", height: "80%" }}  />
+            <RiHeartAddLine style={{ width: "80%", height: "80%" }} />
           )}
         </Box>
       </Box>
@@ -86,9 +107,7 @@ const ProductCard = (elem) => {
         </Box>
       </Link>
     </Box>
-       
   );
-          
 };
 
 export default ProductCard;
